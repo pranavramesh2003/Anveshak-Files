@@ -1,4 +1,5 @@
 /*
+ * 
   Reading Position, Velocity and Time (PVT) via UBX binary commands
   By: Paul Clark
   SparkFun Electronics
@@ -27,6 +28,7 @@
 #include<ros.h>
 #include<navigation/gps_data.h>
 #include<std_msgs/Int8.h>
+#include<std_msgs/Bool.h>
 #include <Wire.h> //Needed for I2C to GNSS
 
 #define encA 18
@@ -34,12 +36,22 @@
 
 #include <SparkFun_u-blox_GNSS_v3.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
 
+volatile bool GPS_Pub=false;
+
+void messageCb( const std_msgs::Bool& toggle_msg){
+    GPS_Pub=toggle_msg.data;
+}
+
 SFE_UBLOX_GNSS myGNSS; // SFE_UBLOX_GNSS uses I2C. For Serial or SPI, see Example2 and Example3
 ros::NodeHandle nh;
 navigation::gps_data gps_pos;
 ros::Publisher gps("gps_coordinates",&gps_pos);
 std_msgs::Int8 enc_feed;
 ros::Publisher enc_auto("enc_auto",&enc_feed);
+ros::Subscriber<std_msgs::Bool> sub("gps_bool", &messageCb );
+
+
+
 volatile long enc_pos=0;
 volatile bool A_set=false;
 volatile bool B_set=false;
@@ -61,6 +73,8 @@ void setup()
   nh.getHardware()->setBaud(115200);
   nh.initNode();
   nh.advertise(gps);
+  nh.subscribe(sub);
+
   Wire.begin(); // Start I2C
   pinMode(encA,INPUT_PULLUP);
   pinMode(encB,INPUT_PULLUP);
@@ -83,7 +97,7 @@ void loop()
   // Request (poll) the position, velocity and time (PVT) information.
   // The module only responds when a new position is available. Default is once per second.
   // getPVT() returns true when new data is received.
-  if (millis()-timer > 100 && myGNSS.getPVT() == true)
+  if (GPS_Pub && myGNSS.getPVT() == true)
   {
     int32_t latitude = myGNSS.getLatitude();
     
