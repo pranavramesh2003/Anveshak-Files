@@ -122,9 +122,9 @@ void loop() {
       digitalWrite(DIRl2, LOW);
       analogWrite(PWMl2, abs(pwml));
 
-      digitalWrite(DIRl3, LOW
+      digitalWrite(DIRl3, LOW);
       digitalWrite(DIRl1, HIGH);
-      analogWrite(PWMl1, abs(pwml)););
+      analogWrite(PWMl1, abs(pwml));
       analogWrite(PWMl3, abs(pwml));
     }
     else
