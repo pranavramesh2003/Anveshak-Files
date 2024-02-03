@@ -1,0 +1,2650 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Dec 24 2023 10:32:26[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25d9ch (155036) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=00035dc4 vaddr=3ffb0000 size=03780h ( 14208) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003954c vaddr=40080000 size=06acch ( 27340) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=93c94h (605332) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000d3cbc vaddr=40086acc size=10618h ( 67096) load[0m
+[0;32mI (438) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (438) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (450) cpu_start: Pro cpu up.[0m
+[0;32mI (450) cpu_start: Starting app cpu, entry point is 0x40081508[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (473) cpu_start: Project name:     MPU6050_DMP6[0m
+[0;32mI (478) cpu_start: App version:      2a7196e-dirty[0m
+[0;32mI (484) cpu_start: Compile time:     Dec 24 2023 10:32:12[0m
+[0;32mI (490) cpu_start: ELF file SHA256:  5f1dd3914a10808d...[0m
+[0;32mI (496) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (501) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (506) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (511) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (516) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (523) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (529) heap_init: At 3FFB8500 len 00027B00 (158 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400970E4 len 00008F1C (35 KiB): IRAM[0m
+[0;32mI (555) spi_flash: detected chip: generic[0m
+[0;32mI (558) spi_flash: flash io: dio[0m
+[0;33mW (562) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (577) app_start: Starting scheduler on CPU0[0m
+[0;32mI (581) app_start: Starting scheduler on CPU1[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (591) wifi station: Start[0m
+I (641) wifi:wifi driver task: 3ffc04f8, prio:23, stack:6656, core=0
+I (651) wifi:wifi firmware version: b2f1f86
+I (651) wifi:wifi certification version: v7.0
+I (651) wifi:config NVS flash: enabled
+I (651) wifi:config nano formating: disabled
+I (661) wifi:Init data frame dynamic rx buffer num: 32
+I (661) wifi:Init management frame dynamic rx buffer num: 32
+I (671) wifi:Init management short buffer num: 32
+I (671) wifi:Init dynamic tx buffer num: 32
+I (681) wifi:Init static rx buffer size: 1600
+I (681) wifi:Init static rx buffer num: 10
+I (691) wifi:Init dynamic rx buffer num: 32
+[0;32mI (691) wifi_init: rx ba win: 6[0m
+[0;32mI (691) wifi_init: tcpip mbox: 32[0m
+[0;32mI (701) wifi_init: udp mbox: 6[0m
+[0;32mI (701) wifi_init: tcp mbox: 6[0m
+[0;32mI (701) wifi_init: tcp tx win: 5744[0m
+[0;32mI (711) wifi_init: tcp rx win: 5744[0m
+[0;32mI (711) wifi_init: tcp mss: 1440[0m
+[0;32mI (721) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (721) wifi_init: WiFi RX IRAM OP enabled[0m
+I (731) wifi:Set ps type: 0
+
+[0;32mI (731) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+
+Brownout detector was triggered
+
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Dec 24 2023 10:32:26[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25d9ch (155036) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=00035dc4 vaddr=3ffb0000 size=03780h ( 14208) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003954c vaddr=40080000 size=06acch ( 27340) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=93c94h (605332) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000d3cbc vaddr=40086acc size=10618h ( 67096) load[0m
+[0;32mI (438) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (438) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (450) cpu_start: Pro cpu up.[0m
+[0;32mI (450) cpu_start: Starting app cpu, entry point is 0x40081508[0m
+[0;32mI (437) cpu_start: App cpu up.[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (473) cpu_start: Project name:     MPU6050_DMP6[0m
+[0;32mI (478) cpu_start: App version:      2a7196e-dirty[0m
+[0;32mI (484) cpu_start: Compile time:     Dec 24 2023 10:32:12[0m
+[0;32mI (490) cpu_start: ELF file SHA256:  5f1dd3914a10808d...[0m
+[0;32mI (496) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (501) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (506) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (511) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (516) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (523) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (529) heap_init: At 3FFB8500 len 00027B00 (158 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400970E4 len 00008F1C (35 KiB): IRAM[0m
+[0;32mI (555) spi_flash: detected chip: generic[0m
+[0;32mI (559) spi_flash: flash io: dio[0m
+[0;33mW (562) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (577) app_start: Starting scheduler on CPU0[0m
+[0;32mI (581) app_start: Starting scheduler on CPU1[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (591) wifi station: Start[0m
+I (641) wifi:wifi driver task: 3ffc04f8, prio:23, stack:6656, core=0
+I (651) wifi:wifi firmware version: b2f1f86
+I (651) wifi:wifi certification version: v7.0
+I (651) wifi:config NVS flash: enabled
+I (651) wifi:config nano formating: disabled
+I (661) wifi:Init data frame dynamic rx buffer num: 32
+I (661) wifi:Init management frame dynamic rx buffer num: 32
+I (671) wifi:Init management short buffer num: 32
+I (671) wifi:Init dynamic tx buffer num: 32
+I (681) wifi:Init static rx buffer size: 1600
+I (681) wifi:Init static rx buffer num: 10
+I (691) wifi:Init dynamic rx buffer num: 32
+[0;32mI (691) wifi_init: rx ba win: 6[0m
+[0;32mI (691) wifi_init: tcpip mbox: 32[0m
+[0;32mI (701) wifi_init: udp mbox: 6[0m
+[0;32mI (701) wifi_init: tcp mbox: 6[0m
+[0;32mI (701) wifi_init: tcp tx win: 5744[0m
+[0;32mI (711) wifi_init: tcp rx win: 5744[0m
+[0;32mI (711) wifi_init: tcp mss: 1440[0m
+[0;32mI (721) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (721) wifi_init: WiFi RX IRAM OP enabled[0m
+I (731) wifi:Set ps type: 0
+
+[0;32mI (731) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+
+Brownout detector was triggered
+
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Dec 24 2023 10:32:26[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25d9ch (155036) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=00035dc4 vaddr=3ffb0000 size=03780h ( 14208) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003954c vaddr=40080000 size=06acch ( 27340) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=93c94h (605332) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000d3cbc vaddr=40086acc size=10618h ( 67096) load[0m
+[0;32mI (438) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (438) boot: Disabling RNG early entropy source...[0m
+[0;32mI (450) cpu_start: Multicore app[0m
+[0;32mI (450) cpu_start: Pro cpu up.[0m
+[0;32mI (450) cpu_start: Starting app cpu, entry point is 0x40081508[0m
+[0;32mI (437) cpu_start: App cpu up.[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (473) cpu_start: Project name:     MPU6050_DMP6[0m
+[0;32mI (478) cpu_start: App version:      2a7196e-dirty[0m
+[0;32mI (484) cpu_start: Compile time:     Dec 24 2023 10:32:12[0m
+[0;32mI (490) cpu_start: ELF file SHA256:  5f1dd3914a10808d...[0m
+[0;32mI (496) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (501) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (506) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (511) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (516) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (523) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (529) heap_init: At 3FFB8500 len 00027B00 (158 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (548) heap_init: At 400970E4 len 00008F1C (35 KiB): IRAM[0m
+[0;32mI (555) spi_flash: detected chip: generic[0m
+[0;32mI (559) spi_flash: flash io: dio[0m
+[0;33mW (562) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (577) app_start: Starting scheduler on CPU0[0m
+[0;32mI (581) app_start: Starting scheduler on CPU1[0m
+[0;32mI (581) main_task: Started on CPU0[0m
+[0;32mI (591) main_task: Calling app_main()[0m
+[0;32mI (591) wifi station: Start[0m
+I (641) wifi:wifi driver task: 3ffc04f8, prio:23, stack:6656, core=0
+I (651) wifi:wifi firmware version: b2f1f86
+I (651) wifi:wifi certification version: v7.0
+I (651) wifi:config NVS flash: enabled
+I (651) wifi:config nano formating: disabled
+I (661) wifi:Init data frame dynamic rx buffer num: 32
+I (661) wifi:Init management frame dynamic rx buffer num: 32
+I (671) wifi:Init management short buffer num: 32
+I (671) wifi:Init dynamic tx buffer num: 32
+I (681) wifi:Init static rx buffer size: 1600
+I (681) wifi:Init static rx buffer num: 10
+I (691) wifi:Init dynamic rx buffer num: 32
+[0;32mI (691) wifi_init: rx ba win: 6[0m
+[0;32mI (691) wifi_init: tcpip mbox: 32[0m
+[0;32mI (701) wifi_init: udp mbox: 6[0m
+[0;32mI (701) wifi_init: tcp mbox: 6[0m
+[0;32mI (701) wifi_init: tcp tx win: 5744[0m
+[0;32mI (711) wifi_init: tcp rx win: 5744[0m
+[0;32mI (711) wifi_init: tcp mss: 1440[0m
+[0;32mI (721) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (721) wifi_init: WiFi RX IRAM OP enabled[0m
+I (731) wifi:Set ps type: 0
+
+[0;32mI (731) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (841) wifi:mode : sta (b0:a7:32:de:e5:08)
+I (841) wifi:enable tsf
+I (851) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (851) wifi:state: init -> auth (b0)
+I (881) wifi:state: auth -> assoc (0)
+I (1881) wifi:state: assoc -> init (2700)
+I (1891) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+[0;32mI (1891) wifi station: retry to connect to the AP[0m
+[0;32mI (1891) wifi station: connect to the AP fail[0m
+[0;32mI (4301) wifi station: retry to connect to the AP[0m
+[0;32mI (4301) wifi station: connect to the AP fail[0m
+I (4331) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (4331) wifi:state: init -> auth (b0)
+I (4361) wifi:state: auth -> assoc (0)
+I (4371) wifi:state: assoc -> run (10)
+I (4461) wifi:connected with Galaxy M32205D, aid = 2, channel 6, BW20, bssid = 96:3a:bc:28:a9:a8
+I (4461) wifi:security: WPA2-PSK, phy: bgn, rssi: -26
+I (4471) wifi:pm start, type: 0
+
+I (4531) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (5471) esp_netif_handlers: sta ip: 192.168.33.84, mask: 255.255.255.0, gw: 192.168.33.72[0m
+[0;32mI (5471) wifi station: got ip:192.168.33.84[0m
+[0;32mI (5471) wifi station: connected to ap SSID:Galaxy M32205D password:itay3498[0m
+[0;32mI (5481) wifi station: wifi_init_sta finished.[0m
+[0;32mI (5481) wifi station: Finish[0m
+[0;32mI (5491) MAIN: mdns hostname set to: [ESP32][0m
+[0;32mI (5491) MAIN: cparam0=[192.168.33.84][0m
+[0;32mI (5501) server_task: Start task_parameter=192.168.33.84[0m
+[0;32mI (5501) server_task: Starting server on http://192.168.33.84[0m
+[0;32mI (5511) server_task: PriorityGet=5[0m
+[0;32mI (5511) server_handle_task: Starting[0m
+[0;32mI (5521) server_task: server listening[0m
+[0;32mI (5521) client_task: Starting. task_parameter=0x111[0m
+[0;32mI (5531) IMU: getDeviceID=0x68[0m
+[0;32mI (5561) SEND: Start[0m
+[0;32mI (5871) IMU: devStatus=0[0m
+[0;32mI (6561) main_task: Returned from app_main()[0m
+[0;32mI (8071) IMU: roll:0.419671 pitch:-0.020983 yaw:0.000077[0m
+[0;32mI (8071) IMU: 0.419671 -0.020983 0.000077
+[0m
+[0;32mI (8181) IMU: roll:0.377704 pitch:-0.013989 yaw:0.000046[0m
+[0;32mI (8181) IMU: 0.377704 -0.013989 0.000046
+[0m
+[0;32mI (8291) IMU: roll:0.342732 pitch:-0.027978 yaw:0.000084[0m
+[0;32mI (8291) IMU: 0.342732 -0.027978 0.000084
+[0m
+[0;32mI (8401) IMU: roll:0.321750 pitch:-0.034953 yaw:-0.006897[0m
+[0;32mI (8401) IMU: 0.321750 -0.034953 -0.006897
+[0m
+[0;32mI (8511) IMU: roll:0.300765 pitch:-0.027978 yaw:0.000073[0m
+[0;32mI (8511) IMU: 0.300765 -0.027978 0.000073
+[0m
+[0;32mI (8621) IMU: roll:0.272785 pitch:-0.027995 yaw:0.007062[0m
+[0;32mI (8621) IMU: 0.272785 -0.027995 0.007062
+[0m
+[0;32mI (8731) IMU: roll:0.258794 pitch:-0.055972 yaw:0.007122[0m
+[0;32mI (8731) IMU: 0.258794 -0.055972 0.007122
+[0m
+[0;32mI (8841) IMU: roll:0.244813 pitch:-0.034943 yaw:-0.013916[0m
+[0;32mI (8841) IMU: 0.244813 -0.034943 -0.013916
+[0m
+[0;32mI (8951) IMU: roll:0.223830 pitch:-0.041940 yaw:-0.013909[0m
+[0;32mI (8951) IMU: 0.223830 -0.041940 -0.013909
+[0m
+[0;32mI (9061) IMU: roll:0.202854 pitch:-0.041905 yaw:-0.034902[0m
+[0;32mI (9061) IMU: 0.202854 -0.041905 -0.034902
+[0m
+[0;32mI (9171) IMU: roll:0.174840 pitch:0.035090 yaw:-0.077002[0m
+[0;32mI (9171) IMU: 0.174840 0.035090 -0.077002
+[0m
+[0;32mI (9281) IMU: roll:0.174842 pitch:0.035079 yaw:-0.070007[0m
+[0;32mI (9281) IMU: 0.174842 0.035079 -0.070007
+[0m
+[0;32mI (9391) IMU: roll:0.146865 pitch:0.056010 yaw:-0.042044[0m
+[0;32mI (9391) IMU: 0.146865 0.056010 -0.042044
+[0m
+[0;32mI (9501) IMU: roll:0.167848 pitch:0.049033 yaw:-0.049039[0m
+[0;32mI (9501) IMU: 0.167848 0.049033 -0.049039
+[0m
+[0;32mI (9611) IMU: roll:0.139887 pitch:0.007063 yaw:-0.055972[0m
+[0;32mI (9611) IMU: 0.139887 0.007063 -0.055972
+[0m
+[0;32mI (9721) IMU: roll:0.118887 pitch:0.021100 yaw:-0.111948[0m
+[0;32mI (9721) IMU: 0.118887 0.021100 -0.111948
+[0m
+[0;32mI (9831) IMU: roll:0.090896 pitch:0.028084 yaw:-0.132934[0m
+[0;32mI (9831) IMU: 0.090896 0.028084 -0.132934
+[0m
+[0;32mI (9941) IMU: roll:0.055919 pitch:0.028053 yaw:-0.153912[0m
+[0;32mI (9941) IMU: 0.055919 0.028053 -0.153912
+[0m
+[0;32mI (10051) IMU: roll:0.034887 pitch:0.056010 yaw:-0.174901[0m
+[0;32mI (10051) IMU: 0.034887 0.056010 -0.174901
+[0m
+[0;32mI (10161) IMU: roll:0.020932 pitch:0.035003 yaw:-0.167895[0m
+[0;32mI (10161) IMU: 0.020932 0.035003 -0.167895
+[0m
+[0;32mI (10271) IMU: roll:0.006995 pitch:0.000009 yaw:-0.139908[0m
+[0;32mI (10271) IMU: 0.006995 0.000009 -0.139908
+[0m
+[0;32mI (10381) IMU: roll:-0.006960 pitch:-0.027987 yaw:-0.139909[0m
+[0;32mI (10381) IMU: -0.006960 -0.027987 -0.139909
+[0m
+[0;32mI (10491) IMU: roll:-0.006946 pitch:-0.041975 yaw:-0.132915[0m
+[0;32mI (10491) IMU: -0.006946 -0.041975 -0.132915
+[0m
+[0;32mI (10591) IMU: roll:-0.027927 pitch:-0.042001 yaw:-0.139918[0m
+[0;32mI (10601) IMU: -0.027927 -0.042001 -0.139918
+[0m
+[0;32mI (10701) IMU: roll:-0.062904 pitch:-0.035057 yaw:-0.153917[0m
+[0;32mI (10711) IMU: -0.062904 -0.035057 -0.153917
+[0m
+[0;32mI (10811) IMU: roll:-0.055947 pitch:-0.007066 yaw:-0.146906[0m
+[0;32mI (10821) IMU: -0.055947 -0.007066 -0.146906
+[0m
+[0;32mI (10921) IMU: roll:-0.069953 pitch:0.006913 yaw:-0.132908[0m
+[0;32mI (10931) IMU: -0.069953 0.006913 -0.132908
+[0m
+[0;32mI (11031) IMU: roll:-0.077008 pitch:0.055862 yaw:-0.139870[0m
+[0;32mI (11041) IMU: -0.077008 0.055862 -0.139870
+[0m
+[0;32mI (11141) IMU: roll:-0.056123 pitch:0.118828 yaw:-0.160836[0m
+[0;32mI (11151) IMU: -0.056123 0.118828 -0.160836
+[0m
+[0;32mI (11261) IMU: roll:-0.021101 pitch:0.083905 yaw:-0.160878[0m
+[0;32mI (11261) IMU: -0.021101 0.083905 -0.160878
+[0m
+[0;32mI (11361) IMU: roll:-0.014087 pitch:0.069926 yaw:-0.160885[0m
+[0;32mI (11371) IMU: -0.014087 0.069926 -0.160885
+[0m
+[0;32mI (11471) IMU: roll:-0.014058 pitch:0.048942 yaw:-0.160888[0m
+[0;32mI (11481) IMU: -0.014058 0.048942 -0.160888
+[0m
+[0;32mI (11581) IMU: roll:-0.007029 pitch:0.027970 yaw:-0.139906[0m
+[0;32mI (11591) IMU: -0.007029 0.027970 -0.139906
+[0m
+[0;32mI (11691) IMU: roll:-0.035121 pitch:0.083872 yaw:-0.202840[0m
+[0;32mI (11701) IMU: -0.035121 0.083872 -0.202840
+[0m
+[0;32mI (11801) IMU: roll:-0.049173 pitch:0.104819 yaw:-0.230802[0m
+[0;32mI (11811) IMU: -0.049173 0.104819 -0.230802
+[0m
+[0;32mI (11911) IMU: roll:-0.049238 pitch:0.125793 yaw:-0.251779[0m
+[0;32mI (11921) IMU: -0.049238 0.125793 -0.251779
+[0m
+[0;32mI (12021) IMU: roll:-0.042275 pitch:0.132798 yaw:-0.265774[0m
+[0;32mI (12031) IMU: -0.042275 0.132798 -0.265774
+[0m
+[0;32mI (12131) IMU: roll:-0.049293 pitch:0.146774 yaw:-0.258765[0m
+[0;32mI (12141) IMU: -0.049293 0.146774 -0.258765
+[0m
+[0;32mI (12241) IMU: roll:-0.042290 pitch:0.146792 yaw:-0.251779[0m
+[0;32mI (12251) IMU: -0.042290 0.146792 -0.251779
+[0m
+[0;32mI (12351) IMU: roll:-0.035273 pitch:0.132817 yaw:-0.258787[0m
+[0;32mI (12361) IMU: -0.035273 0.132817 -0.258787
+[0m
+[0;32mI (12461) IMU: roll:-0.049284 pitch:0.146777 yaw:-0.251770[0m
+[0;32mI (12471) IMU: -0.049284 0.146777 -0.251770
+[0m
+[0;32mI (12571) IMU: roll:-0.049335 pitch:0.160760 yaw:-0.265754[0m
+[0;32mI (12581) IMU: -0.049335 0.160760 -0.265754
+[0m
+[0;32mI (12681) IMU: roll:-0.028398 pitch:0.167798 yaw:-0.286768[0m
+[0;32mI (12691) IMU: -0.028398 0.167798 -0.286768
+[0m
+[0;32mI (12791) IMU: roll:-0.021386 pitch:0.160821 yaw:-0.286779[0m
+[0;32mI (12801) IMU: -0.021386 0.160821 -0.286779
+[0m
+[0;32mI (12901) IMU: roll:-0.014374 pitch:0.153844 yaw:-0.286790[0m
+[0;32mI (12911) IMU: -0.014374 0.153844 -0.286790
+[0m
+[0;32mI (13011) IMU: roll:-0.021334 pitch:0.139837 yaw:-0.286783[0m
+[0;32mI (13021) IMU: -0.021334 0.139837 -0.286783
+[0m
+[0;32mI (13121) IMU: roll:-0.021351 pitch:0.146832 yaw:-0.286782[0m
+[0;32mI (13131) IMU: -0.021351 0.146832 -0.286782
+[0m
+[0;32mI (13231) IMU: roll:-0.035385 pitch:0.160784 yaw:-0.293755[0m
+[0;32mI (13241) IMU: -0.035385 0.160784 -0.293755
+[0m
+[0;32mI (13341) IMU: roll:-0.042370 pitch:0.160768 yaw:-0.286750[0m
+[0;32mI (13351) IMU: -0.042370 0.160768 -0.286750
+[0m
+[0;32mI (13451) IMU: roll:-0.042300 pitch:0.132790 yaw:-0.286760[0m
+[0;32mI (13461) IMU: -0.042300 0.132790 -0.286760
+[0m
+[0;32mI (13561) IMU: roll:-0.056275 pitch:0.118756 yaw:-0.307736[0m
+[0;32mI (13571) IMU: -0.056275 0.118756 -0.307736
+[0m
+[0;32mI (13671) IMU: roll:-0.070214 pitch:0.104738 yaw:-0.293740[0m
+[0;32mI (13681) IMU: -0.070214 0.104738 -0.293740
+[0m
+[0;32mI (13781) IMU: roll:-0.084095 pitch:0.062735 yaw:-0.293758[0m
+[0;32mI (13791) IMU: -0.084095 0.062735 -0.293758
+[0m
+[0;32mI (13891) IMU: roll:-0.084036 pitch:0.041762 yaw:-0.279783[0m
+[0;32mI (13901) IMU: -0.084036 0.041762 -0.279783
+[0m
+[0;32mI (14001) IMU: roll:-0.098100 pitch:0.062675 yaw:-0.321731[0m
+[0;32mI (14011) IMU: -0.098100 0.062675 -0.321731
+[0m
+[0;32mI (14111) IMU: roll:-0.133056 pitch:0.055575 yaw:-0.328714[0m
+[0;32mI (14121) IMU: -0.133056 0.055575 -0.328714
+[0m
+[0;32mI (14221) IMU: roll:-0.133072 pitch:0.062577 yaw:-0.321711[0m
+[0;32mI (14231) IMU: -0.133072 0.062577 -0.321711
+[0m
+[0;32mI (14331) IMU: roll:-0.133141 pitch:0.083544 yaw:-0.335677[0m
+[0;32mI (14341) IMU: -0.133141 0.083544 -0.335677
+[0m
+[0;32mI (14441) IMU: roll:-0.119248 pitch:0.111549 yaw:-0.349648[0m
+[0;32mI (14451) IMU: -0.119248 0.111549 -0.349648
+[0m
+[0;32mI (14551) IMU: roll:-0.105323 pitch:0.132575 yaw:-0.349643[0m
+[0;32mI (14561) IMU: -0.105323 0.132575 -0.349643
+[0m
+[0;32mI (14661) IMU: roll:-0.105374 pitch:0.146557 yaw:-0.356625[0m
+[0;32mI (14671) IMU: -0.105374 0.146557 -0.356625
+[0m
+[0;32mI (14771) IMU: roll:-0.105366 pitch:0.146564 yaw:-0.349630[0m
+[0;32mI (14781) IMU: -0.105366 0.146564 -0.349630
+[0m
+[0;32mI (14881) IMU: roll:-0.098435 pitch:0.167568 yaw:-0.349621[0m
+[0;32mI (14891) IMU: -0.098435 0.167568 -0.349621
+[0m
+[0;32mI (14991) IMU: roll:-0.091451 pitch:0.174590 yaw:-0.342631[0m
+[0;32mI (15001) IMU: -0.091451 0.174590 -0.342631
+[0m
+[0;32mI (15101) IMU: roll:-0.098446 pitch:0.174569 yaw:-0.342620[0m
+[0;32mI (15111) IMU: -0.098446 0.174569 -0.342620
+[0m
+[0;32mI (15211) IMU: roll:-0.070443 pitch:0.153652 yaw:-0.370657[0m
+[0;32mI (15221) IMU: -0.070443 0.153652 -0.370657
+[0m
+[0;32mI (15321) IMU: roll:-0.035512 pitch:0.160755 yaw:-0.384692[0m
+[0;32mI (15331) IMU: -0.035512 0.160755 -0.384692
+[0m
+[0;32mI (15431) IMU: roll:-0.035664 pitch:0.188722 yaw:-0.419658[0m
+[0;32mI (15441) IMU: -0.035664 0.188722 -0.419658
+[0m
+[0;32mI (15541) IMU: roll:-0.042814 pitch:0.223663 yaw:-0.433624[0m
+[0;32mI (15551) IMU: -0.042814 0.223663 -0.433624
+[0m
+[0;32mI (15651) IMU: roll:-0.070976 pitch:0.244510 yaw:-0.482521[0m
+[0;32mI (15661) IMU: -0.070976 0.244510 -0.482521
+[0m
+[0;32mI (15761) IMU: roll:-0.084905 pitch:0.230462 yaw:-0.482501[0m
+[0;32mI (15771) IMU: -0.084905 0.230462 -0.482501
+[0m
+[0;32mI (15871) IMU: roll:-0.077925 pitch:0.230486 yaw:-0.489510[0m
+[0;32mI (15881) IMU: -0.077925 0.230486 -0.489510
+[0m
+[0;32mI (15981) IMU: roll:-0.077823 pitch:0.209508 yaw:-0.482529[0m
+[0;32mI (15991) IMU: -0.077823 0.209508 -0.482529
+[0m
+[0;32mI (16091) IMU: roll:-0.077823 pitch:0.209508 yaw:-0.482529[0m
+[0;32mI (16101) IMU: -0.077823 0.209508 -0.482529
+[0m
+[0;32mI (16201) IMU: roll:-0.070823 pitch:0.202534 yaw:-0.496536[0m
+[0;32mI (16211) IMU: -0.070823 0.202534 -0.496536
+[0m
+[0;32mI (16311) IMU: roll:-0.064008 pitch:0.258536 yaw:-0.468539[0m
+[0;32mI (16321) IMU: -0.064008 0.258536 -0.468539
+[0m
+[0;32mI (16421) IMU: roll:-0.057077 pitch:0.258550 yaw:-0.496534[0m
+[0;32mI (16431) IMU: -0.057077 0.258550 -0.496534
+[0m
+[0;32mI (16531) IMU: roll:-0.064372 pitch:0.314463 yaw:-0.517472[0m
+[0;32mI (16541) IMU: -0.064372 0.314463 -0.517472
+[0m
+[0;32mI (16641) IMU: roll:-0.078092 pitch:0.258450 yaw:-0.510476[0m
+[0;32mI (16651) IMU: -0.078092 0.258449 -0.510476
+[0m
+[0;32mI (16751) IMU: roll:-0.071097 pitch:0.251477 yaw:-0.524486[0m
+[0;32mI (16761) IMU: -0.071097 0.251477 -0.524486
+[0m
+[0;32mI (16861) IMU: roll:-0.085232 pitch:0.272381 yaw:-0.545424[0m
+[0;32mI (16871) IMU: -0.085232 0.272381 -0.545424
+[0m
+[0;32mI (16971) IMU: roll:-0.092345 pitch:0.286319 yaw:-0.566380[0m
+[0;32mI (16981) IMU: -0.092345 0.286319 -0.566380
+[0m
+[0;32mI (17081) IMU: roll:-0.106403 pitch:0.300238 yaw:-0.566332[0m
+[0;32mI (17091) IMU: -0.106403 0.300238 -0.566332
+[0m
+[0;32mI (17191) IMU: roll:-0.141254 pitch:0.279091 yaw:-0.559271[0m
+[0;32mI (17191) IMU: -0.141254 0.279091 -0.559271
+[0m
+[0;32mI (17301) IMU: roll:-0.176401 pitch:0.306875 yaw:-0.573131[0m
+[0;32mI (17301) IMU: -0.176401 0.306875 -0.573131
+[0m
+[0;32mI (17411) IMU: roll:-0.204238 pitch:0.278758 yaw:-0.573104[0m
+[0;32mI (17411) IMU: -0.204238 0.278758 -0.573104
+[0m
+[0;32mI (17521) IMU: roll:-0.239175 pitch:0.271588 yaw:-0.573032[0m
+[0;32mI (17521) IMU: -0.239175 0.271588 -0.573032
+[0m
+[0;32mI (17631) IMU: roll:-0.238770 pitch:0.208742 yaw:-0.524200[0m
+[0;32mI (17631) IMU: -0.238770 0.208742 -0.524200
+[0m
+[0;32mI (17741) IMU: roll:-0.266494 pitch:0.159702 yaw:-0.503277[0m
+[0;32mI (17741) IMU: -0.266494 0.159702 -0.503277
+[0m
+[0;32mI (17851) IMU: roll:-0.231302 pitch:0.117961 yaw:-0.468438[0m
+[0;32mI (17851) IMU: -0.231302 0.117961 -0.468438
+[0m
+[0;32mI (17961) IMU: roll:-0.210312 pitch:0.118059 yaw:-0.461465[0m
+[0;32mI (17961) IMU: -0.210312 0.118059 -0.461465
+[0m
+[0;32mI (18071) IMU: roll:-0.168476 pitch:0.146186 yaw:-0.475459[0m
+[0;32mI (18071) IMU: -0.168476 0.146186 -0.475459
+[0m
+[0;32mI (18181) IMU: roll:-0.161549 pitch:0.160194 yaw:-0.482443[0m
+[0;32mI (18181) IMU: -0.161549 0.160194 -0.482443
+[0m
+[0;32mI (18291) IMU: roll:-0.154643 pitch:0.181206 yaw:-0.482425[0m
+[0;32mI (18291) IMU: -0.154643 0.181206 -0.482425
+[0m
+[0;32mI (18401) IMU: roll:-0.147750 pitch:0.202210 yaw:-0.489404[0m
+[0;32mI (18401) IMU: -0.147750 0.202210 -0.489404
+[0m
+[0;32mI (18511) IMU: roll:-0.154908 pitch:0.237142 yaw:-0.496339[0m
+[0;32mI (18511) IMU: -0.154908 0.237142 -0.496339
+[0m
+[0;32mI (18621) IMU: roll:-0.161933 pitch:0.244106 yaw:-0.496315[0m
+[0;32mI (18621) IMU: -0.161933 0.244106 -0.496315
+[0m
+[0;32mI (18731) IMU: roll:-0.148035 pitch:0.265150 yaw:-0.496318[0m
+[0;32mI (18741) IMU: -0.148035 0.265150 -0.496318
+[0m
+[0;32mI (18841) IMU: roll:-0.141041 pitch:0.251157 yaw:-0.524331[0m
+[0;32mI (18841) IMU: -0.141041 0.251157 -0.524331
+[0m
+[0;32mI (18951) IMU: roll:-0.134015 pitch:0.244195 yaw:-0.524355[0m
+[0;32mI (18951) IMU: -0.134015 0.244195 -0.524355
+[0m
+[0;32mI (19061) IMU: roll:-0.106037 pitch:0.244323 yaw:-0.524415[0m
+[0;32mI (19061) IMU: -0.106037 0.244323 -0.524415
+[0m
+[0;32mI (19171) IMU: roll:-0.106149 pitch:0.272307 yaw:-0.517394[0m
+[0;32mI (19171) IMU: -0.106149 0.272307 -0.517394
+[0m
+[0;32mI (19281) IMU: roll:-0.106244 pitch:0.293290 yaw:-0.517375[0m
+[0;32mI (19281) IMU: -0.106244 0.293290 -0.517375
+[0m
+[0;32mI (19391) IMU: roll:-0.113301 pitch:0.307247 yaw:-0.517344[0m
+[0;32mI (19391) IMU: -0.113301 0.307247 -0.517344
+[0m
+[0;32mI (19501) IMU: roll:-0.106390 pitch:0.321261 yaw:-0.524344[0m
+[0;32mI (19501) IMU: -0.106390 0.321261 -0.524345
+[0m
+[0;32mI (19611) IMU: roll:-0.120327 pitch:0.314210 yaw:-0.517317[0m
+[0;32mI (19611) IMU: -0.120327 0.314210 -0.517317
+[0m
+[0;32mI (19721) IMU: roll:-0.113333 pitch:0.314241 yaw:-0.517337[0m
+[0;32mI (19721) IMU: -0.113333 0.314241 -0.517337
+[0m
+[0;32mI (19831) IMU: roll:-0.099325 pitch:0.314311 yaw:-0.510381[0m
+[0;32mI (19831) IMU: -0.099325 0.314311 -0.510381
+[0m
+[0;32mI (19941) IMU: roll:-0.113356 pitch:0.328244 yaw:-0.503333[0m
+[0;32mI (19941) IMU: -0.113356 0.328244 -0.503333
+[0m
+[0;32mI (20051) IMU: roll:-0.120339 pitch:0.321211 yaw:-0.510315[0m
+[0;32mI (20051) IMU: -0.120339 0.321211 -0.510315
+[0m
+[0;32mI (20161) IMU: roll:-0.120422 pitch:0.335193 yaw:-0.517296[0m
+[0;32mI (20161) IMU: -0.120422 0.335193 -0.517296
+[0m
+[0;32mI (20271) IMU: roll:-0.113314 pitch:0.314248 yaw:-0.510342[0m
+[0;32mI (20271) IMU: -0.113314 0.314248 -0.510342
+[0m
+[0;32mI (20381) IMU: roll:-0.134259 pitch:0.314171 yaw:-0.496294[0m
+[0;32mI (20381) IMU: -0.134259 0.314171 -0.496294
+[0m
+[0;32mI (20491) IMU: roll:-0.127125 pitch:0.286232 yaw:-0.489349[0m
+[0;32mI (20491) IMU: -0.127125 0.286232 -0.489349
+[0m
+[0;32mI (20601) IMU: roll:-0.141156 pitch:0.300170 yaw:-0.482302[0m
+[0;32mI (20601) IMU: -0.141156 0.300170 -0.482302
+[0m
+[0;32mI (20711) IMU: roll:-0.148229 pitch:0.314120 yaw:-0.489261[0m
+[0;32mI (20711) IMU: -0.148229 0.314120 -0.489261
+[0m
+[0;32mI (20821) IMU: roll:-0.141162 pitch:0.293158 yaw:-0.496300[0m
+[0;32mI (20821) IMU: -0.141162 0.293158 -0.496300
+[0m
+[0;32mI (20931) IMU: roll:-0.127215 pitch:0.307215 yaw:-0.489326[0m
+[0;32mI (20931) IMU: -0.127215 0.307215 -0.489326
+[0m
+[0;32mI (21041) IMU: roll:-0.127204 pitch:0.300213 yaw:-0.496329[0m
+[0;32mI (21041) IMU: -0.127204 0.300213 -0.496329
+[0m
+[0;32mI (21151) IMU: roll:-0.134198 pitch:0.300183 yaw:-0.496310[0m
+[0;32mI (21151) IMU: -0.134198 0.300183 -0.496310
+[0m
+[0;32mI (21261) IMU: roll:-0.134278 pitch:0.314163 yaw:-0.503289[0m
+[0;32mI (21261) IMU: -0.134278 0.314163 -0.503289
+[0m
+[0;32mI (21371) IMU: roll:-0.120402 pitch:0.335200 yaw:-0.510301[0m
+[0;32mI (21371) IMU: -0.120402 0.335200 -0.510301
+[0m
+[0;32mI (21481) IMU: roll:-0.113384 pitch:0.321229 yaw:-0.524325[0m
+[0;32mI (21481) IMU: -0.113384 0.321229 -0.524325
+[0m
+[0;32mI (21591) IMU: roll:-0.113512 pitch:0.349206 yaw:-0.524297[0m
+[0;32mI (21591) IMU: -0.113512 0.349206 -0.524297
+[0m
+[0;32mI (21701) IMU: roll:-0.120571 pitch:0.363163 yaw:-0.524261[0m
+[0;32mI (21701) IMU: -0.120571 0.363163 -0.524261
+[0m
+[0;32mI (21811) IMU: roll:-0.134560 pitch:0.363098 yaw:-0.524217[0m
+[0;32mI (21811) IMU: -0.134560 0.363098 -0.524217
+[0m
+[0;32mI (21921) IMU: roll:-0.134624 pitch:0.377087 yaw:-0.524200[0m
+[0;32mI (21921) IMU: -0.134624 0.377087 -0.524200
+[0m
+[0;32mI (22031) IMU: roll:-0.127726 pitch:0.398102 yaw:-0.524201[0m
+[0;32mI (22031) IMU: -0.127726 0.398102 -0.524201
+[0m
+[0;32mI (22141) IMU: roll:-0.141659 pitch:0.391052 yaw:-0.517165[0m
+[0;32mI (22141) IMU: -0.141659 0.391052 -0.517165
+[0m
+[0;32mI (22251) IMU: roll:-0.134728 pitch:0.405073 yaw:-0.517173[0m
+[0;32mI (22251) IMU: -0.134728 0.405073 -0.517173
+[0m
+[0;32mI (22361) IMU: roll:-0.155679 pitch:0.397983 yaw:-0.517108[0m
+[0;32mI (22361) IMU: -0.155679 0.397983 -0.517108
+[0m
+[0;32mI (22471) IMU: roll:-0.162650 pitch:0.397962 yaw:-0.510089[0m
+[0;32mI (22471) IMU: -0.162650 0.397962 -0.510089
+[0m
+[0;32mI (22581) IMU: roll:-0.176607 pitch:0.390905 yaw:-0.510050[0m
+[0;32mI (22581) IMU: -0.176607 0.390905 -0.510050
+[0m
+[0;32mI (22691) IMU: roll:-0.190542 pitch:0.383860 yaw:-0.503019[0m
+[0;32mI (22691) IMU: -0.190542 0.383860 -0.503019
+[0m
+[0;32mI (22801) IMU: roll:-0.211572 pitch:0.383741 yaw:-0.516937[0m
+[0;32mI (22801) IMU: -0.211572 0.383741 -0.516937
+[0m
+[0;32mI (22911) IMU: roll:-0.211477 pitch:0.362758 yaw:-0.516976[0m
+[0;32mI (22911) IMU: -0.211477 0.362758 -0.516976
+[0m
+[0;32mI (23021) IMU: roll:-0.225402 pitch:0.348707 yaw:-0.516958[0m
+[0;32mI (23021) IMU: -0.225402 0.348707 -0.516958
+[0m
+[0;32mI (23131) IMU: roll:-0.239359 pitch:0.341649 yaw:-0.516929[0m
+[0;32mI (23131) IMU: -0.239359 0.341649 -0.516929
+[0m
+[0;32mI (23241) IMU: roll:-0.232365 pitch:0.341681 yaw:-0.516951[0m
+[0;32mI (23241) IMU: -0.232365 0.341680 -0.516951
+[0m
+[0;32mI (23351) IMU: roll:-0.232472 pitch:0.355641 yaw:-0.530912[0m
+[0;32mI (23351) IMU: -0.232472 0.355641 -0.530912
+[0m
+[0;32mI (23461) IMU: roll:-0.218669 pitch:0.390664 yaw:-0.537884[0m
+[0;32mI (23461) IMU: -0.218669 0.390664 -0.537884
+[0m
+[0;32mI (23571) IMU: roll:-0.232739 pitch:0.397563 yaw:-0.551811[0m
+[0;32mI (23571) IMU: -0.232739 0.397563 -0.551811
+[0m
+[0;32mI (23681) IMU: roll:-0.225721 pitch:0.397611 yaw:-0.544841[0m
+[0;32mI (23681) IMU: -0.225721 0.397611 -0.544841
+[0m
+[0;32mI (23791) IMU: roll:-0.232773 pitch:0.404558 yaw:-0.551797[0m
+[0;32mI (23791) IMU: -0.232773 0.404558 -0.551797
+[0m
+[0;32mI (23901) IMU: roll:-0.225711 pitch:0.390603 yaw:-0.551850[0m
+[0;32mI (23901) IMU: -0.225711 0.390603 -0.551850
+[0m
+[0;32mI (24011) IMU: roll:-0.225779 pitch:0.404591 yaw:-0.551822[0m
+[0;32mI (24011) IMU: -0.225779 0.404591 -0.551822
+[0m
+[0;32mI (24121) IMU: roll:-0.219032 pitch:0.467600 yaw:-0.537739[0m
+[0;32mI (24121) IMU: -0.219032 0.467600 -0.537739
+[0m
+[0;32mI (24231) IMU: roll:-0.226175 pitch:0.474506 yaw:-0.565675[0m
+[0;32mI (24231) IMU: -0.226175 0.474506 -0.565675
+[0m
+[0;32mI (24341) IMU: roll:-0.212244 pitch:0.474549 yaw:-0.579723[0m
+[0;32mI (24341) IMU: -0.212244 0.474549 -0.579723
+[0m
+[0;32mI (24451) IMU: roll:-0.205214 pitch:0.467590 yaw:-0.579765[0m
+[0;32mI (24451) IMU: -0.205214 0.467590 -0.579765
+[0m
+[0;32mI (24561) IMU: roll:-0.198284 pitch:0.474608 yaw:-0.586776[0m
+[0;32mI (24561) IMU: -0.198284 0.474608 -0.586776
+[0m
+[0;32mI (24671) IMU: roll:-0.219339 pitch:0.488488 yaw:-0.586662[0m
+[0;32mI (24671) IMU: -0.219339 0.488488 -0.586662
+[0m
+[0;32mI (24781) IMU: roll:-0.219380 pitch:0.502490 yaw:-0.579641[0m
+[0;32mI (24781) IMU: -0.219380 0.502490 -0.579641
+[0m
+[0;32mI (24891) IMU: roll:-0.233339 pitch:0.502434 yaw:-0.572584[0m
+[0;32mI (24891) IMU: -0.233339 0.502434 -0.572584
+[0m
+[0;32mI (25001) IMU: roll:-0.226244 pitch:0.488494 yaw:-0.565648[0m
+[0;32mI (25001) IMU: -0.226244 0.488494 -0.565648
+[0m
+[0;32mI (25111) IMU: roll:-0.205256 pitch:0.481592 yaw:-0.572745[0m
+[0;32mI (25111) IMU: -0.205256 0.481592 -0.572745
+[0m
+[0;32mI (25221) IMU: roll:-0.212123 pitch:0.467594 yaw:-0.558752[0m
+[0;32mI (25221) IMU: -0.212123 0.467594 -0.558752
+[0m
+[0;32mI (25331) IMU: roll:-0.226140 pitch:0.467512 yaw:-0.565689[0m
+[0;32mI (25331) IMU: -0.226140 0.467512 -0.565689
+[0m
+[0;32mI (25441) IMU: roll:-0.233038 pitch:0.453503 yaw:-0.558693[0m
+[0;32mI (25441) IMU: -0.233038 0.453503 -0.558693
+[0m
+[0;32mI (25551) IMU: roll:-0.246992 pitch:0.446440 yaw:-0.558652[0m
+[0;32mI (25551) IMU: -0.246992 0.446440 -0.558652
+[0m
+[0;32mI (25661) IMU: roll:-0.282217 pitch:0.474176 yaw:-0.586424[0m
+[0;32mI (25661) IMU: -0.282217 0.474176 -0.586424
+[0m
+[0;32mI (25771) IMU: roll:-0.296070 pitch:0.453140 yaw:-0.579425[0m
+[0;32mI (25771) IMU: -0.296070 0.453140 -0.579425
+[0m
+[0;32mI (25881) IMU: roll:-0.295954 pitch:0.425145 yaw:-0.586491[0m
+[0;32mI (25881) IMU: -0.295954 0.425145 -0.586491
+[0m
+[0;32mI (25991) IMU: roll:-0.288996 pitch:0.432175 yaw:-0.586500[0m
+[0;32mI (25991) IMU: -0.288996 0.432175 -0.586500
+[0m
+[0;32mI (26101) IMU: roll:-0.310015 pitch:0.439061 yaw:-0.586401[0m
+[0;32mI (26101) IMU: -0.310015 0.439061 -0.586401
+[0m
+[0;32mI (26211) IMU: roll:-0.303029 pitch:0.446110 yaw:-0.579415[0m
+[0;32mI (26211) IMU: -0.303029 0.446110 -0.579415
+[0m
+[0;32mI (26321) IMU: roll:-0.310260 pitch:0.481007 yaw:-0.593282[0m
+[0;32mI (26321) IMU: -0.310260 0.481007 -0.593282
+[0m
+[0;32mI (26431) IMU: roll:-0.310423 pitch:0.494938 yaw:-0.614228[0m
+[0;32mI (26431) IMU: -0.310423 0.494938 -0.614228
+[0m
+[0;32mI (26541) IMU: roll:-0.303504 pitch:0.508964 yaw:-0.614222[0m
+[0;32mI (26541) IMU: -0.303504 0.508964 -0.614222
+[0m
+[0;32mI (26651) IMU: roll:-0.296479 pitch:0.509020 yaw:-0.607259[0m
+[0;32mI (26651) IMU: -0.296479 0.509020 -0.607259
+[0m
+[0;32mI (26761) IMU: roll:-0.289485 pitch:0.509058 yaw:-0.607291[0m
+[0;32mI (26761) IMU: -0.289485 0.509058 -0.607291
+[0m
+[0;32mI (26871) IMU: roll:-0.268581 pitch:0.530169 yaw:-0.600342[0m
+[0;32mI (26871) IMU: -0.268581 0.530169 -0.600342
+[0m
+[0;32mI (26981) IMU: roll:-0.268655 pitch:0.544157 yaw:-0.600310[0m
+[0;32mI (26981) IMU: -0.268655 0.544157 -0.600310
+[0m
+[0;32mI (27091) IMU: roll:-0.275720 pitch:0.551097 yaw:-0.607254[0m
+[0;32mI (27091) IMU: -0.275719 0.551097 -0.607254
+[0m
+[0;32mI (27201) IMU: roll:-0.268796 pitch:0.558112 yaw:-0.614267[0m
+[0;32mI (27201) IMU: -0.268796 0.558112 -0.614267
+[0m
+[0;32mI (27311) IMU: roll:-0.261842 pitch:0.572154 yaw:-0.607275[0m
+[0;32mI (27311) IMU: -0.261842 0.572154 -0.607275
+[0m
+[0;32mI (27421) IMU: roll:-0.254885 pitch:0.579186 yaw:-0.607295[0m
+[0;32mI (27421) IMU: -0.254885 0.579186 -0.607295
+[0m
+[0;32mI (27531) IMU: roll:-0.254848 pitch:0.572191 yaw:-0.607310[0m
+[0;32mI (27531) IMU: -0.254848 0.572191 -0.607310
+[0m
+[0;32mI (27641) IMU: roll:-0.254923 pitch:0.586180 yaw:-0.607280[0m
+[0;32mI (27641) IMU: -0.254923 0.586180 -0.607280
+[0m
+[0;32mI (27751) IMU: roll:-0.255184 pitch:0.635138 yaw:-0.607172[0m
+[0;32mI (27751) IMU: -0.255184 0.635139 -0.607172
+[0m
+[0;32mI (27861) IMU: roll:-0.255035 pitch:0.607162 yaw:-0.607233[0m
+[0;32mI (27861) IMU: -0.255035 0.607162 -0.607233
+[0m
+[0;32mI (27971) IMU: roll:-0.241009 pitch:0.607252 yaw:-0.600314[0m
+[0;32mI (27971) IMU: -0.241009 0.607252 -0.600314
+[0m
+[0;32mI (28081) IMU: roll:-0.261918 pitch:0.593153 yaw:-0.600233[0m
+[0;32mI (28081) IMU: -0.261918 0.593153 -0.600233
+[0m
+[0;32mI (28191) IMU: roll:-0.247893 pitch:0.593242 yaw:-0.593312[0m
+[0;32mI (28191) IMU: -0.247893 0.593242 -0.593312
+[0m
+[0;32mI (28301) IMU: roll:-0.276017 pitch:0.600039 yaw:-0.614132[0m
+[0;32mI (28301) IMU: -0.276017 0.600039 -0.614132
+[0m
+[0;32mI (28411) IMU: roll:-0.311103 pitch:0.613819 yaw:-0.620904[0m
+[0;32mI (28411) IMU: -0.311103 0.613819 -0.620904
+[0m
+[0;32mI (28521) IMU: roll:-0.339264 pitch:0.606547 yaw:-0.662738[0m
+[0;32mI (28521) IMU: -0.339264 0.606547 -0.662738
+[0m
+[0;32mI (28631) IMU: roll:-0.380814 pitch:0.529344 yaw:-0.669760[0m
+[0;32mI (28631) IMU: -0.380814 0.529344 -0.669760
+[0m
+[0;32mI (28741) IMU: roll:-0.415631 pitch:0.508181 yaw:-0.662677[0m
+[0;32mI (28741) IMU: -0.415631 0.508181 -0.662677
+[0m
+[0;32mI (28851) IMU: roll:-0.429661 pitch:0.515094 yaw:-0.662587[0m
+[0;32mI (28851) IMU: -0.429661 0.515094 -0.662587
+[0m
+[0;32mI (28961) IMU: roll:-0.408894 pitch:0.564225 yaw:-0.648522[0m
+[0;32mI (28961) IMU: -0.408894 0.564225 -0.648522
+[0m
+[0;32mI (29071) IMU: roll:-0.339114 pitch:0.599615 yaw:-0.641776[0m
+[0;32mI (29071) IMU: -0.339114 0.599615 -0.641776
+[0m
+[0;32mI (29181) IMU: roll:-0.339070 pitch:0.585606 yaw:-0.648811[0m
+[0;32mI (29181) IMU: -0.339070 0.585607 -0.648811
+[0m
+[0;32mI (29291) IMU: roll:-0.381568 pitch:0.563939 yaw:-0.781551[0m
+[0;32mI (29291) IMU: -0.381568 0.563938 -0.781551
+[0m
+[0;32mI (29401) IMU: roll:-0.402791 pitch:0.563621 yaw:-0.830402[0m
+[0;32mI (29401) IMU: -0.402791 0.563621 -0.830402
+[0m
+[0;32mI (29511) IMU: roll:-0.402744 pitch:0.591770 yaw:-0.781348[0m
+[0;32mI (29511) IMU: -0.402744 0.591770 -0.781348
+[0m
+[0;32mI (29621) IMU: roll:-0.389021 pitch:0.647890 yaw:-0.760252[0m
+[0;32mI (29621) IMU: -0.389021 0.647890 -0.760252
+[0m
+[0;32mI (29731) IMU: roll:-0.375179 pitch:0.675982 yaw:-0.753248[0m
+[0;32mI (29731) IMU: -0.375179 0.675982 -0.753248
+[0m
+[0;32mI (29841) IMU: roll:-0.382227 pitch:0.696965 yaw:-0.739149[0m
+[0;32mI (29841) IMU: -0.382227 0.696965 -0.739149
+[0m
+[0;32mI (29951) IMU: roll:-0.382275 pitch:0.710976 yaw:-0.732109[0m
+[0;32mI (29951) IMU: -0.382275 0.710976 -0.732109
+[0m
+[0;32mI (30061) IMU: roll:-0.375321 pitch:0.703981 yaw:-0.746164[0m
+[0;32mI (30061) IMU: -0.375321 0.703981 -0.746164
+[0m
+[0;32mI (30171) IMU: roll:-0.396531 pitch:0.724776 yaw:-0.759949[0m
+[0;32mI (30171) IMU: -0.396531 0.724776 -0.759949
+[0m
+[0;32mI (30281) IMU: roll:-0.389572 pitch:0.710763 yaw:-0.781023[0m
+[0;32mI (30281) IMU: -0.389572 0.710763 -0.781023
+[0m
+[0;32mI (30391) IMU: roll:-0.390100 pitch:0.773659 yaw:-0.794799[0m
+[0;32mI (30391) IMU: -0.390100 0.773659 -0.794799
+[0m
+[0;32mI (30501) IMU: roll:-0.412194 pitch:0.920411 yaw:-0.801276[0m
+[0;32mI (30501) IMU: -0.412194 0.920411 -0.801276
+[0m
+[0;32mI (30611) IMU: roll:-0.412194 pitch:0.920411 yaw:-0.801276[0m
+[0;32mI (30611) IMU: -0.412194 0.920411 -0.801276
+[0m
+[0;32mI (30721) IMU: roll:-0.419208 pitch:0.892281 yaw:-0.829300[0m
+[0;32mI (30721) IMU: -0.419208 0.892281 -0.829300
+[0m
+[0;32mI (30821) IMU: roll:-0.397995 pitch:0.857387 yaw:-0.836427[0m
+[0;32mI (30821) IMU: -0.397995 0.857387 -0.836427
+[0m
+[0;32mI (30931) IMU: roll:-0.363073 pitch:0.871655 yaw:-0.829656[0m
+[0;32mI (30931) IMU: -0.363073 0.871655 -0.829656
+[0m
+[0;32mI (31041) IMU: roll:-0.363071 pitch:0.878671 yaw:-0.822640[0m
+[0;32mI (31041) IMU: -0.363071 0.878671 -0.822640
+[0m
+[0;32mI (31141) IMU: roll:-0.376850 pitch:0.871646 yaw:-0.801572[0m
+[0;32mI (31141) IMU: -0.376850 0.871646 -0.801572
+[0m
+[0;32mI (31241) IMU: roll:-0.355862 pitch:0.878810 yaw:-0.794719[0m
+[0;32mI (31241) IMU: -0.355862 0.878810 -0.794719
+[0m
+[0;32mI (31341) IMU: roll:-0.362803 pitch:0.878784 yaw:-0.787671[0m
+[0;32mI (31341) IMU: -0.362803 0.878784 -0.787671
+[0m
+[0;32mI (31441) IMU: roll:-0.369889 pitch:0.899739 yaw:-0.780556[0m
+[0;32mI (31441) IMU: -0.369889 0.899739 -0.780556
+[0m
+[0;32mI (31541) IMU: roll:-0.376883 pitch:0.899691 yaw:-0.780500[0m
+[0;32mI (31541) IMU: -0.376883 0.899691 -0.780500
+[0m
+[0;32mI (31641) IMU: roll:-0.362887 pitch:0.906804 yaw:-0.773596[0m
+[0;32mI (31641) IMU: -0.362887 0.906804 -0.773596
+[0m
+[0;32mI (31741) IMU: roll:-0.341793 pitch:0.906989 yaw:-0.759776[0m
+[0;32mI (31741) IMU: -0.341793 0.906989 -0.759776
+[0m
+[0;32mI (31841) IMU: roll:-0.348631 pitch:0.899992 yaw:-0.745753[0m
+[0;32mI (31841) IMU: -0.348631 0.899992 -0.745753
+[0m
+[0;32mI (31951) IMU: roll:-0.383540 pitch:0.906803 yaw:-0.731463[0m
+[0;32mI (31951) IMU: -0.383540 0.906803 -0.731463
+[0m
+[0;32mI (32051) IMU: roll:-0.418972 pitch:0.955539 yaw:-0.745131[0m
+[0;32mI (32051) IMU: -0.418972 0.955539 -0.745131
+[0m
+[0;32mI (32151) IMU: roll:-0.425954 pitch:0.962514 yaw:-0.738051[0m
+[0;32mI (32151) IMU: -0.425954 0.962514 -0.738051
+[0m
+[0;32mI (32261) IMU: roll:-0.446836 pitch:0.955410 yaw:-0.730904[0m
+[0;32mI (32261) IMU: -0.446836 0.955410 -0.730904
+[0m
+[0;32mI (32361) IMU: roll:-0.446105 pitch:0.906589 yaw:-0.681999[0m
+[0;32mI (32361) IMU: -0.446105 0.906589 -0.681999
+[0m
+[0;32mI (32461) IMU: roll:-0.460149 pitch:0.906476 yaw:-0.688881[0m
+[0;32mI (32461) IMU: -0.460149 0.906476 -0.688881
+[0m
+[0;32mI (32561) IMU: roll:-0.488140 pitch:0.899282 yaw:-0.695680[0m
+[0;32mI (32561) IMU: -0.488140 0.899282 -0.695680
+[0m
+[0;32mI (32671) IMU: roll:-0.467059 pitch:0.892446 yaw:-0.688881[0m
+[0;32mI (32671) IMU: -0.467059 0.892446 -0.688881
+[0m
+[0;32mI (32771) IMU: roll:-0.467229 pitch:0.920421 yaw:-0.688769[0m
+[0;32mI (32771) IMU: -0.467229 0.920421 -0.688769
+[0m
+[0;32mI (32871) IMU: roll:-0.460377 pitch:0.934423 yaw:-0.695764[0m
+[0;32mI (32871) IMU: -0.460377 0.934423 -0.695764
+[0m
+[0;32mI (32971) IMU: roll:-0.446517 pitch:0.955490 yaw:-0.695799[0m
+[0;32mI (32971) IMU: -0.446517 0.955490 -0.695799
+[0m
+[0;32mI (33081) IMU: roll:-0.453570 pitch:0.955419 yaw:-0.702734[0m
+[0;32mI (33081) IMU: -0.453570 0.955419 -0.702734
+[0m
+[0;32mI (33181) IMU: roll:-0.425490 pitch:0.948626 yaw:-0.696002[0m
+[0;32mI (33181) IMU: -0.425490 0.948626 -0.696002
+[0m
+[0;32mI (33281) IMU: roll:-0.411486 pitch:0.955731 yaw:-0.689101[0m
+[0;32mI (33281) IMU: -0.411486 0.955731 -0.689101
+[0m
+[0;32mI (33381) IMU: roll:-0.418364 pitch:0.955740 yaw:-0.675053[0m
+[0;32mI (33381) IMU: -0.418364 0.955740 -0.675053
+[0m
+[0;32mI (33491) IMU: roll:-0.425544 pitch:0.976653 yaw:-0.681911[0m
+[0;32mI (33491) IMU: -0.425544 0.976653 -0.681911
+[0m
+[0;32mI (33591) IMU: roll:-0.418490 pitch:0.976721 yaw:-0.674978[0m
+[0;32mI (33591) IMU: -0.418490 0.976721 -0.674978
+[0m
+[0;32mI (33691) IMU: roll:-0.411707 pitch:0.997780 yaw:-0.682083[0m
+[0;32mI (33691) IMU: -0.411707 0.997780 -0.682083
+[0m
+[0;32mI (33791) IMU: roll:-0.404542 pitch:0.983799 yaw:-0.675074[0m
+[0;32mI (33791) IMU: -0.404542 0.983799 -0.675074
+[0m
+[0;32mI (33891) IMU: roll:-0.390655 pitch:0.990852 yaw:-0.682166[0m
+[0;32mI (33891) IMU: -0.390655 0.990852 -0.682166
+[0m
+[0;32mI (34001) IMU: roll:-0.411544 pitch:0.990836 yaw:-0.668116[0m
+[0;32mI (34001) IMU: -0.411544 0.990836 -0.668116
+[0m
+[0;32mI (34101) IMU: roll:-0.418539 pitch:0.990795 yaw:-0.668055[0m
+[0;32mI (34101) IMU: -0.418539 0.990795 -0.668055
+[0m
+[0;32mI (34201) IMU: roll:-0.418580 pitch:0.997789 yaw:-0.668030[0m
+[0;32mI (34201) IMU: -0.418580 0.997789 -0.668030
+[0m
+[0;32mI (34301) IMU: roll:-0.404443 pitch:0.997861 yaw:-0.654042[0m
+[0;32mI (34301) IMU: -0.404443 0.997861 -0.654042
+[0m
+[0;32mI (34411) IMU: roll:-0.390433 pitch:1.004960 yaw:-0.647148[0m
+[0;32mI (34411) IMU: -0.390433 1.004960 -0.647148
+[0m
+[0;32mI (34511) IMU: roll:-0.369449 pitch:1.005081 yaw:-0.647334[0m
+[0;32mI (34511) IMU: -0.369449 1.005081 -0.647334
+[0m
+[0;32mI (34611) IMU: roll:-0.376609 pitch:1.019067 yaw:-0.654341[0m
+[0;32mI (34611) IMU: -0.376609 1.019067 -0.654341
+[0m
+[0;32mI (34711) IMU: roll:-0.383605 pitch:1.019026 yaw:-0.654278[0m
+[0;32mI (34711) IMU: -0.383605 1.019026 -0.654278
+[0m
+[0;32mI (34821) IMU: roll:-0.397449 pitch:0.997902 yaw:-0.654104[0m
+[0;32mI (34821) IMU: -0.397449 0.997902 -0.654104
+[0m
+[0;32mI (34921) IMU: roll:-0.397248 pitch:0.983964 yaw:-0.640163[0m
+[0;32mI (34921) IMU: -0.397248 0.983964 -0.640163
+[0m
+[0;32mI (35021) IMU: roll:-0.404203 pitch:0.976930 yaw:-0.640127[0m
+[0;32mI (35021) IMU: -0.404203 0.976930 -0.640127
+[0m
+[0;32mI (35121) IMU: roll:-0.410962 pitch:0.955960 yaw:-0.626152[0m
+[0;32mI (35121) IMU: -0.410962 0.955960 -0.626152
+[0m
+[0;32mI (35221) IMU: roll:-0.445916 pitch:0.962787 yaw:-0.618836[0m
+[0;32mI (35221) IMU: -0.445916 0.962787 -0.618836
+[0m
+[0;32mI (35331) IMU: roll:-0.424459 pitch:0.907031 yaw:-0.598236[0m
+[0;32mI (35331) IMU: -0.424459 0.907031 -0.598236
+[0m
+[0;32mI (35431) IMU: roll:-0.430708 pitch:0.844262 yaw:-0.542458[0m
+[0;32mI (35431) IMU: -0.430708 0.844262 -0.542458
+[0m
+[0;32mI (35531) IMU: roll:-0.550807 pitch:1.018424 yaw:-0.575815[0m
+[0;32mI (35531) IMU: -0.550807 1.018424 -0.575815
+[0m
+[0;32mI (35631) IMU: roll:-0.396448 pitch:0.956258 yaw:-0.563320[0m
+[0;32mI (35631) IMU: -0.396448 0.956258 -0.563320
+[0m
+[0;32mI (35741) IMU: roll:-0.295707 pitch:0.607577 yaw:-0.362191[0m
+[0;32mI (35741) IMU: -0.295707 0.607577 -0.362191
+[0m
+[0;32mI (35951) IMU: roll:-0.413614 pitch:0.264324 yaw:-0.404758[0m
+[0;32mI (35951) IMU: -0.413614 0.264324 -0.404758
+[0m
+[0;32mI (36051) IMU: roll:-0.497619 pitch:0.242739 yaw:-0.474597[0m
+[0;32mI (36051) IMU: -0.497619 0.242739 -0.474597
+[0m
+[0;32mI (36151) IMU: roll:-0.715372 pitch:0.395179 yaw:-0.557088[0m
+[0;32mI (36151) IMU: -0.715372 0.395179 -0.557088
+[0m
+[0;32mI (36251) IMU: roll:-0.687955 pitch:0.457883 yaw:-0.619760[0m
+[0;32mI (36251) IMU: -0.687955 0.457883 -0.619760
+[0m
+[0;32mI (36351) IMU: roll:-0.722649 pitch:0.366328 yaw:-0.690125[0m
+[0;32mI (36351) IMU: -0.722649 0.366328 -0.690125
+[0m
+[0;32mI (36451) IMU: roll:-0.709198 pitch:0.478533 yaw:-0.654513[0m
+[0;32mI (36451) IMU: -0.709198 0.478533 -0.654513
+[0m
+[0;32mI (36551) IMU: roll:-0.667712 pitch:0.555668 yaw:-0.661244[0m
+[0;32mI (36551) IMU: -0.667712 0.555668 -0.661243
+[0m
+[0;32mI (36651) IMU: roll:-0.632639 pitch:0.555989 yaw:-0.640437[0m
+[0;32mI (36651) IMU: -0.632639 0.555989 -0.640437
+[0m
+[0;32mI (36751) IMU: roll:-0.618685 pitch:0.556031 yaw:-0.647501[0m
+[0;32mI (36751) IMU: -0.618685 0.556031 -0.647501
+[0m
+[0;32mI (36851) IMU: roll:-0.556098 pitch:0.654477 yaw:-0.612372[0m
+[0;32mI (36851) IMU: -0.556098 0.654477 -0.612372
+[0m
+[0;32mI (36951) IMU: roll:-0.584588 pitch:0.724157 yaw:-0.632837[0m
+[0;32mI (36951) IMU: -0.584588 0.724157 -0.632837
+[0m
+[0;32mI (37051) IMU: roll:-0.625768 pitch:0.647334 yaw:-0.570036[0m
+[0;32mI (37051) IMU: -0.625768 0.647334 -0.570036
+[0m
+[0;32mI (37151) IMU: roll:-0.590126 pitch:0.577897 yaw:-0.507647[0m
+[0;32mI (37151) IMU: -0.590126 0.577897 -0.507647
+[0m
+[0;32mI (37251) IMU: roll:-0.610749 pitch:0.550088 yaw:-0.458726[0m
+[0;32mI (37251) IMU: -0.610749 0.550088 -0.458726
+[0m
+[0;32mI (37351) IMU: roll:-0.533411 pitch:0.445457 yaw:-0.466584[0m
+[0;32mI (37351) IMU: -0.533411 0.445457 -0.466584
+[0m
+[0;32mI (37451) IMU: roll:-0.519451 pitch:0.452509 yaw:-0.466608[0m
+[0;32mI (37451) IMU: -0.519451 0.452509 -0.466608
+[0m
+[0;32mI (37551) IMU: roll:-0.554656 pitch:0.501290 yaw:-0.473225[0m
+[0;32mI (37551) IMU: -0.554656 0.501290 -0.473225
+[0m
+[0;32mI (37651) IMU: roll:-0.526643 pitch:0.515492 yaw:-0.452302[0m
+[0;32mI (37651) IMU: -0.526643 0.515492 -0.452302
+[0m
+[0;32mI (37751) IMU: roll:-0.498390 pitch:0.508855 yaw:-0.396503[0m
+[0;32mI (37751) IMU: -0.498390 0.508855 -0.396503
+[0m
+[0;32mI (37851) IMU: roll:-0.512575 pitch:0.564759 yaw:-0.396191[0m
+[0;32mI (37851) IMU: -0.512576 0.564759 -0.396191
+[0m
+[0;32mI (37951) IMU: roll:-0.540578 pitch:0.571654 yaw:-0.396018[0m
+[0;32mI (37951) IMU: -0.540578 0.571654 -0.396018
+[0m
+[0;32mI (38051) IMU: roll:-0.561503 pitch:0.536541 yaw:-0.410071[0m
+[0;32mI (38051) IMU: -0.561503 0.536541 -0.410071
+[0m
+[0;32mI (38151) IMU: roll:-0.526460 pitch:0.508659 yaw:-0.417361[0m
+[0;32mI (38151) IMU: -0.526460 0.508659 -0.417361
+[0m
+[0;32mI (38251) IMU: roll:-0.512434 pitch:0.515768 yaw:-0.403404[0m
+[0;32mI (38251) IMU: -0.512434 0.515768 -0.403404
+[0m
+[0;32mI (38351) IMU: roll:-0.519324 pitch:0.494792 yaw:-0.396472[0m
+[0;32mI (38351) IMU: -0.519324 0.494792 -0.396472
+[0m
+[0;32mI (38451) IMU: roll:-0.512354 pitch:0.501811 yaw:-0.396471[0m
+[0;32mI (38451) IMU: -0.512354 0.501811 -0.396471
+[0m
+[0;32mI (38551) IMU: roll:-0.484573 pitch:0.557863 yaw:-0.396360[0m
+[0;32mI (38551) IMU: -0.484573 0.557863 -0.396360
+[0m
+[0;32mI (38651) IMU: roll:-0.456765 pitch:0.585882 yaw:-0.410377[0m
+[0;32mI (38651) IMU: -0.456765 0.585882 -0.410377
+[0m
+[0;32mI (38751) IMU: roll:-0.470763 pitch:0.578808 yaw:-0.417328[0m
+[0;32mI (38751) IMU: -0.470763 0.578808 -0.417328
+[0m
+[0;32mI (38851) IMU: roll:-0.456889 pitch:0.599814 yaw:-0.424311[0m
+[0;32mI (38851) IMU: -0.456889 0.599814 -0.424311
+[0m
+[0;32mI (38951) IMU: roll:-0.414823 pitch:0.593029 yaw:-0.410569[0m
+[0;32mI (38951) IMU: -0.414823 0.593029 -0.410569
+[0m
+[0;32mI (39051) IMU: roll:-0.365500 pitch:0.502305 yaw:-0.404119[0m
+[0;32mI (39051) IMU: -0.365500 0.502305 -0.404119
+[0m
+[0;32mI (39151) IMU: roll:-0.358496 pitch:0.446222 yaw:-0.453289[0m
+[0;32mI (39151) IMU: -0.358496 0.446222 -0.453289
+[0m
+[0;32mI (39251) IMU: roll:-0.379525 pitch:0.495214 yaw:-0.418070[0m
+[0;32mI (39251) IMU: -0.379525 0.495214 -0.418070
+[0m
+[0;32mI (39351) IMU: roll:-0.351456 pitch:0.495382 yaw:-0.397208[0m
+[0;32mI (39351) IMU: -0.351456 0.495382 -0.397208
+[0m
+[0;32mI (39451) IMU: roll:-0.358556 pitch:0.516318 yaw:-0.404107[0m
+[0;32mI (39451) IMU: -0.358556 0.516318 -0.404107
+[0m
+[0;32mI (39551) IMU: roll:-0.351719 pitch:0.551293 yaw:-0.411027[0m
+[0;32mI (39551) IMU: -0.351719 0.551293 -0.411027
+[0m
+[0;32mI (39651) IMU: roll:-0.337841 pitch:0.572305 yaw:-0.418028[0m
+[0;32mI (39651) IMU: -0.337841 0.572305 -0.418028
+[0m
+[0;32mI (39751) IMU: roll:-0.337883 pitch:0.593309 yaw:-0.410972[0m
+[0;32mI (39751) IMU: -0.337883 0.593309 -0.410972
+[0m
+[0;32mI (39851) IMU: roll:-0.337883 pitch:0.593309 yaw:-0.410972[0m
+[0;32mI (39851) IMU: -0.337883 0.593309 -0.410972
+[0m
+[0;32mI (39951) IMU: roll:-0.351960 pitch:0.607225 yaw:-0.417851[0m
+[0;32mI (39951) IMU: -0.351960 0.607225 -0.417851
+[0m
+[0;32mI (40161) IMU: roll:-0.358880 pitch:0.607243 yaw:-0.403824[0m
+[0;32mI (40161) IMU: -0.358880 0.607243 -0.403824
+[0m
+[0;32mI (40371) IMU: roll:-0.309918 pitch:0.607418 yaw:-0.404086[0m
+[0;32mI (40371) IMU: -0.309918 0.607418 -0.404086
+[0m
+[0;32mI (40581) IMU: roll:-0.295903 pitch:0.621492 yaw:-0.390135[0m
+[0;32mI (40581) IMU: -0.295903 0.621492 -0.390135
+[0m
+[0;32mI (40791) IMU: roll:-0.309916 pitch:0.628438 yaw:-0.390040[0m
+[0;32mI (40791) IMU: -0.309916 0.628438 -0.390040
+[0m
+[0;32mI (41001) IMU: roll:-0.316849 pitch:0.621440 yaw:-0.383025[0m
+[0;32mI (41001) IMU: -0.316849 0.621440 -0.383025
+[0m
+[0;32mI (41221) IMU: roll:-0.337895 pitch:0.628342 yaw:-0.389885[0m
+[0;32mI (41221) IMU: -0.337895 0.628342 -0.389885
+[0m
+[0;32mI (41441) IMU: roll:-0.421707 pitch:0.614115 yaw:-0.375481[0m
+[0;32mI (41441) IMU: -0.421707 0.614115 -0.375481
+[0m
+[0;32mI (41551) IMU: roll:-0.414689 pitch:0.607145 yaw:-0.375544[0m
+[0;32mI (41551) IMU: -0.414689 0.607145 -0.375544
+[0m
+[0;32mI (41661) IMU: roll:-0.386233 pitch:0.481389 yaw:-0.362127[0m
+[0;32mI (41661) IMU: -0.386233 0.481389 -0.362127
+[0m
+[0;32mI (41771) IMU: roll:-0.463813 pitch:0.571783 yaw:-0.431381[0m
+[0;32mI (41771) IMU: -0.463813 0.571783 -0.431381
+[0m
+[0;32mI (41881) IMU: roll:-0.478336 pitch:0.613401 yaw:-0.501083[0m
+[0;32mI (41881) IMU: -0.478336 0.613401 -0.501083
+[0m
+[0;32mI (41991) IMU: roll:-0.444310 pitch:0.718167 yaw:-0.577810[0m
+[0;32mI (41991) IMU: -0.444310 0.718167 -0.577810
+[0m
+[0;32mI (42101) IMU: roll:-0.635732 pitch:1.080546 yaw:-0.644667[0m
+[0;32mI (42101) IMU: -0.635732 1.080546 -0.644667
+[0m
+[0;32mI (42211) IMU: roll:-0.468555 pitch:1.039116 yaw:-0.751374[0m
+[0;32mI (42211) IMU: -0.468555 1.039116 -0.751374
+[0m
+[0;32mI (42321) IMU: roll:-0.418091 pitch:0.948850 yaw:-0.647101[0m
+[0;32mI (42321) IMU: -0.418091 0.948850 -0.647101
+[0m
+[0;32mI (42431) IMU: roll:-0.354639 pitch:0.900342 yaw:-0.619800[0m
+[0;32mI (42431) IMU: -0.354639 0.900342 -0.619800
+[0m
+[0;32mI (42541) IMU: roll:-0.291028 pitch:0.816832 yaw:-0.592532[0m
+[0;32mI (42541) IMU: -0.291028 0.816832 -0.592532
+[0m
+[0;32mI (42651) IMU: roll:-0.297294 pitch:0.747003 yaw:-0.536704[0m
+[0;32mI (42651) IMU: -0.297294 0.747003 -0.536704
+[0m
+[0;32mI (42761) IMU: roll:-0.318290 pitch:0.739890 yaw:-0.543579[0m
+[0;32mI (42761) IMU: -0.318290 0.739890 -0.543579
+[0m
+[0;32mI (42871) IMU: roll:-0.325140 pitch:0.718894 yaw:-0.536598[0m
+[0;32mI (42871) IMU: -0.325140 0.718894 -0.536598
+[0m
+[0;32mI (42981) IMU: roll:-0.381252 pitch:0.781646 yaw:-0.515052[0m
+[0;32mI (42981) IMU: -0.381252 0.781646 -0.515052
+[0m
+[0;32mI (43091) IMU: roll:-0.401700 pitch:0.732765 yaw:-0.466114[0m
+[0;32mI (43091) IMU: -0.401700 0.732765 -0.466114
+[0m
+[0;32mI (43201) IMU: roll:-0.394735 pitch:0.718757 yaw:-0.480197[0m
+[0;32mI (43201) IMU: -0.394735 0.718757 -0.480197
+[0m
+[0;32mI (43311) IMU: roll:-0.387845 pitch:0.732751 yaw:-0.487189[0m
+[0;32mI (43311) IMU: -0.387845 0.732751 -0.487189
+[0m
+[0;32mI (43421) IMU: roll:-0.360167 pitch:0.739733 yaw:-0.529316[0m
+[0;32mI (43421) IMU: -0.360167 0.739733 -0.529316
+[0m
+[0;32mI (43531) IMU: roll:-0.346246 pitch:0.795836 yaw:-0.501261[0m
+[0;32mI (43531) IMU: -0.346246 0.795836 -0.501261
+[0m
+[0;32mI (43641) IMU: roll:-0.338652 pitch:0.754091 yaw:-0.438480[0m
+[0;32mI (43641) IMU: -0.338652 0.754091 -0.438480
+[0m
+[0;32mI (43751) IMU: roll:-0.318478 pitch:0.879947 yaw:-0.480243[0m
+[0;32mI (43751) IMU: -0.318478 0.879947 -0.480243
+[0m
+[0;32mI (43861) IMU: roll:-0.324846 pitch:0.789095 yaw:-0.445470[0m
+[0;32mI (43861) IMU: -0.324846 0.789095 -0.445470
+[0m
+[0;32mI (43971) IMU: roll:-0.345502 pitch:0.740118 yaw:-0.424486[0m
+[0;32mI (43971) IMU: -0.345502 0.740118 -0.424486
+[0m
+[0;32mI (44081) IMU: roll:-0.337982 pitch:0.642310 yaw:-0.396839[0m
+[0;32mI (44081) IMU: -0.337982 0.642310 -0.396839
+[0m
+[0;32mI (44191) IMU: roll:-0.351775 pitch:0.586307 yaw:-0.396930[0m
+[0;32mI (44191) IMU: -0.351775 0.586307 -0.396930
+[0m
+[0;32mI (44301) IMU: roll:-0.372981 pitch:0.579079 yaw:-0.445809[0m
+[0;32mI (44301) IMU: -0.372981 0.579079 -0.445809
+[0m
+[0;32mI (44411) IMU: roll:-0.359075 pitch:0.600116 yaw:-0.445815[0m
+[0;32mI (44411) IMU: -0.359075 0.600116 -0.445815
+[0m
+[0;32mI (44521) IMU: roll:-0.380157 pitch:0.635028 yaw:-0.438594[0m
+[0;32mI (44521) IMU: -0.380158 0.635028 -0.438594
+[0m
+[0;32mI (44631) IMU: roll:-0.366210 pitch:0.656087 yaw:-0.431610[0m
+[0;32mI (44631) IMU: -0.366210 0.656087 -0.431610
+[0m
+[0;32mI (44741) IMU: roll:-0.387370 pitch:0.669924 yaw:-0.452427[0m
+[0;32mI (44741) IMU: -0.387370 0.669924 -0.452427
+[0m
+[0;32mI (44851) IMU: roll:-0.366345 pitch:0.670030 yaw:-0.445556[0m
+[0;32mI (44851) IMU: -0.366345 0.670030 -0.445556
+[0m
+[0;32mI (44961) IMU: roll:-0.281606 pitch:0.572650 yaw:-0.362351[0m
+[0;32mI (44961) IMU: -0.281606 0.572650 -0.362351
+[0m
+[0;32mI (45071) IMU: roll:-0.232937 pitch:0.628718 yaw:-0.383470[0m
+[0;32mI (45071) IMU: -0.232937 0.628718 -0.383470
+[0m
+[0;32mI (45181) IMU: roll:-0.246713 pitch:0.621752 yaw:-0.348432[0m
+[0;32mI (45181) IMU: -0.246713 0.621752 -0.348432
+[0m
+[0;32mI (45291) IMU: roll:-0.232867 pitch:0.642749 yaw:-0.362456[0m
+[0;32mI (45291) IMU: -0.232867 0.642749 -0.362456
+[0m
+[0;32mI (45401) IMU: roll:-0.246998 pitch:0.649653 yaw:-0.383348[0m
+[0;32mI (45401) IMU: -0.246998 0.649653 -0.383348
+[0m
+[0;32mI (45511) IMU: roll:-0.275109 pitch:0.642497 yaw:-0.411185[0m
+[0;32mI (45511) IMU: -0.275109 0.642497 -0.411185
+[0m
+[0;32mI (45621) IMU: roll:-0.290507 pitch:0.950095 yaw:-0.445310[0m
+[0;32mI (45621) IMU: -0.290507 0.950095 -0.445310
+[0m
+[0;32mI (45731) IMU: roll:-0.431533 pitch:1.474440 yaw:-0.365312[0m
+[0;32mI (45731) IMU: -0.431533 1.474440 -0.365312
+[0m
+[0;32mI (45841) IMU: roll:-0.467861 pitch:1.684056 yaw:-0.406064[0m
+[0;32mI (45841) IMU: -0.467861 1.684056 -0.406064
+[0m
+[0;32mI (45951) IMU: roll:-0.319449 pitch:1.047720 yaw:-0.507761[0m
+[0;32mI (45951) IMU: -0.319449 1.047721 -0.507761
+[0m
+[0;32mI (46061) IMU: roll:-0.234406 pitch:0.943351 yaw:-0.431801[0m
+[0;32mI (46061) IMU: -0.234406 0.943351 -0.431801
+[0m
+[0;32mI (46171) IMU: roll:-0.220868 pitch:1.013302 yaw:-0.452769[0m
+[0;32mI (46171) IMU: -0.220868 1.013302 -0.452769
+[0m
+[0;32mI (46281) IMU: roll:-0.225753 pitch:0.698823 yaw:-0.313421[0m
+[0;32mI (46281) IMU: -0.225753 0.698823 -0.313421
+[0m
+[0;32mI (46391) IMU: roll:-0.190812 pitch:0.726908 yaw:-0.306594[0m
+[0;32mI (46391) IMU: -0.190812 0.726908 -0.306594
+[0m
+[0;32mI (46501) IMU: roll:-0.246581 pitch:0.656814 yaw:-0.306387[0m
+[0;32mI (46501) IMU: -0.246581 0.656814 -0.306387
+[0m
+[0;32mI (46611) IMU: roll:-0.323136 pitch:0.551751 yaw:-0.285253[0m
+[0;32mI (46611) IMU: -0.323136 0.551751 -0.285253
+[0m
+[0;32mI (46721) IMU: roll:-0.364921 pitch:0.516741 yaw:-0.264175[0m
+[0;32mI (46721) IMU: -0.364921 0.516741 -0.264175
+[0m
+[0;32mI (46831) IMU: roll:-0.413819 pitch:0.502663 yaw:-0.257007[0m
+[0;32mI (46831) IMU: -0.413819 0.502663 -0.257007
+[0m
+[0;32mI (46941) IMU: roll:-0.476556 pitch:0.502722 yaw:-0.207763[0m
+[0;32mI (46941) IMU: -0.476556 0.502722 -0.207763
+[0m
+[0;32mI (47051) IMU: roll:-0.498006 pitch:0.705454 yaw:-0.220781[0m
+[0;32mI (47051) IMU: -0.498006 0.705454 -0.220781
+[0m
+[0;32mI (47161) IMU: roll:-0.532549 pitch:0.600667 yaw:-0.179081[0m
+[0;32mI (47161) IMU: -0.532549 0.600667 -0.179081
+[0m
+[0;32mI (47271) IMU: roll:-0.552482 pitch:0.510687 yaw:0.023448[0m
+[0;32mI (47271) IMU: -0.552482 0.510687 0.023448
+[0m
+[0;32mI (47381) IMU: roll:-0.496620 pitch:0.531571 yaw:0.002304[0m
+[0;32mI (47381) IMU: -0.496620 0.531571 0.002304
+[0m
+[0;32mI (47491) IMU: roll:-0.531031 pitch:0.664913 yaw:0.101014[0m
+[0;32mI (47491) IMU: -0.531031 0.664913 0.101014
+[0m
+[0;32mI (47601) IMU: roll:-0.425100 pitch:0.763265 yaw:0.240674[0m
+[0;32mI (47601) IMU: -0.425100 0.763265 0.240674
+[0m
+[0;32mI (47711) IMU: roll:-0.327465 pitch:0.755953 yaw:0.198034[0m
+[0;32mI (47711) IMU: -0.327465 0.755953 0.198034
+[0m
+[0;32mI (47821) IMU: roll:-0.327481 pitch:0.804872 yaw:0.184184[0m
+[0;32mI (47821) IMU: -0.327481 0.804872 0.184184
+[0m
+[0;32mI (47931) IMU: roll:-0.363238 pitch:0.909462 yaw:0.065844[0m
+[0;32mI (47931) IMU: -0.363238 0.909462 0.065844
+[0m
+[0;32mI (48041) IMU: roll:-0.370193 pitch:0.881511 yaw:0.072804[0m
+[0;32mI (48041) IMU: -0.370193 0.881511 0.072804
+[0m
+[0;32mI (48151) IMU: roll:-0.362947 pitch:0.860636 yaw:0.107660[0m
+[0;32mI (48151) IMU: -0.362947 0.860636 0.107660
+[0m
+[0;32mI (48261) IMU: roll:-0.348886 pitch:0.881627 yaw:0.114614[0m
+[0;32mI (48261) IMU: -0.348886 0.881627 0.114614
+[0m
+[0;32mI (48371) IMU: roll:-0.355649 pitch:0.895708 yaw:0.142692[0m
+[0;32mI (48371) IMU: -0.355649 0.895708 0.142692
+[0m
+[0;32mI (48481) IMU: roll:-0.327861 pitch:0.867640 yaw:0.121408[0m
+[0;32mI (48481) IMU: -0.327861 0.867640 0.121408
+[0m
+[0;32mI (48591) IMU: roll:-0.292992 pitch:0.867569 yaw:0.107153[0m
+[0;32mI (48591) IMU: -0.292993 0.867569 0.107153
+[0m
+[0;32mI (48701) IMU: roll:-0.313937 pitch:0.853618 yaw:0.114269[0m
+[0;32mI (48701) IMU: -0.313937 0.853618 0.114269
+[0m
+[0;32mI (48811) IMU: roll:-0.327896 pitch:0.832669 yaw:0.121308[0m
+[0;32mI (48811) IMU: -0.327896 0.832669 0.121308
+[0m
+[0;32mI (48921) IMU: roll:-0.334905 pitch:0.818688 yaw:0.121317[0m
+[0;32mI (48921) IMU: -0.334905 0.818688 0.121317
+[0m
+[0;32mI (49031) IMU: roll:-0.341849 pitch:0.818716 yaw:0.128363[0m
+[0;32mI (49031) IMU: -0.341849 0.818716 0.128363
+[0m
+[0;32mI (49141) IMU: roll:-0.327867 pitch:0.811707 yaw:0.128243[0m
+[0;32mI (49141) IMU: -0.327867 0.811707 0.128243
+[0m
+[0;32mI (49251) IMU: roll:-0.292900 pitch:0.804675 yaw:0.127978[0m
+[0;32mI (49251) IMU: -0.292900 0.804675 0.127978
+[0m
+[0;32mI (49361) IMU: roll:-0.348794 pitch:0.818744 yaw:0.135408[0m
+[0;32mI (49361) IMU: -0.348794 0.818744 0.135408
+[0m
+[0;32mI (49471) IMU: roll:-0.383726 pitch:0.811812 yaw:0.142629[0m
+[0;32mI (49471) IMU: -0.383726 0.811812 0.142629
+[0m
+[0;32mI (49581) IMU: roll:-0.404727 pitch:0.797849 yaw:0.142727[0m
+[0;32mI (49581) IMU: -0.404727 0.797849 0.142727
+[0m
+[0;32mI (49691) IMU: roll:-0.404679 pitch:0.797873 yaw:0.149722[0m
+[0;32mI (49691) IMU: -0.404679 0.797873 0.149722
+[0m
+[0;32mI (49801) IMU: roll:-0.383597 pitch:0.797894 yaw:0.163567[0m
+[0;32mI (49801) IMU: -0.383597 0.797894 0.163567
+[0m
+[0;32mI (49911) IMU: roll:-0.383450 pitch:0.797964 yaw:0.184553[0m
+[0;32mI (49911) IMU: -0.383450 0.797964 0.184553
+[0m
+[0;32mI (50021) IMU: roll:-0.404397 pitch:0.791027 yaw:0.191669[0m
+[0;32mI (50021) IMU: -0.404397 0.791027 0.191669
+[0m
+[0;32mI (50131) IMU: roll:-0.411505 pitch:0.749049 yaw:0.184570[0m
+[0;32mI (50131) IMU: -0.411505 0.749049 0.184570
+[0m
+[0;32mI (50241) IMU: roll:-0.397425 pitch:0.777028 yaw:0.191572[0m
+[0;32mI (50241) IMU: -0.397425 0.777028 0.191572
+[0m
+[0;32mI (50351) IMU: roll:-0.411426 pitch:0.770056 yaw:0.191641[0m
+[0;32mI (50351) IMU: -0.411426 0.770056 0.191641
+[0m
+[0;32mI (50461) IMU: roll:-0.404372 pitch:0.777063 yaw:0.198614[0m
+[0;32mI (50461) IMU: -0.404372 0.777063 0.198614
+[0m
+[0;32mI (50571) IMU: roll:-0.432316 pitch:0.770142 yaw:0.205772[0m
+[0;32mI (50571) IMU: -0.432316 0.770142 0.205772
+[0m
+[0;32mI (50681) IMU: roll:-0.432316 pitch:0.770142 yaw:0.205772[0m
+[0;32mI (50681) IMU: -0.432316 0.770142 0.205772
+[0m
+[0;32mI (50791) IMU: roll:-0.418350 pitch:0.784081 yaw:0.198734[0m
+[0;32mI (50791) IMU: -0.418350 0.784081 0.198734
+[0m
+[0;32mI (50901) IMU: roll:-0.383411 pitch:0.763040 yaw:0.198426[0m
+[0;32mI (50901) IMU: -0.383411 0.763040 0.198426
+[0m
+[0;32mI (51011) IMU: roll:-0.348354 pitch:0.783986 yaw:0.205253[0m
+[0;32mI (51011) IMU: -0.348354 0.783986 0.205253
+[0m
+[0;32mI (51121) IMU: roll:-0.271307 pitch:0.874759 yaw:0.197950[0m
+[0;32mI (51121) IMU: -0.271307 0.874759 0.197950
+[0m
+[0;32mI (51231) IMU: roll:-0.201050 pitch:0.895685 yaw:0.232430[0m
+[0;32mI (51231) IMU: -0.201050 0.895685 0.232430
+[0m
+[0;32mI (51341) IMU: roll:-0.243019 pitch:0.895768 yaw:0.232758[0m
+[0;32mI (51341) IMU: -0.243019 0.895768 0.232758
+[0m
+[0;32mI (51451) IMU: roll:-0.278021 pitch:0.881849 yaw:0.232996[0m
+[0;32mI (51451) IMU: -0.278021 0.881849 0.232996
+[0m
+[0;32mI (51561) IMU: roll:-0.291929 pitch:0.895883 yaw:0.240134[0m
+[0;32mI (51561) IMU: -0.291929 0.895883 0.240134
+[0m
+[0;32mI (51671) IMU: roll:-0.284870 pitch:0.874921 yaw:0.254018[0m
+[0;32mI (51671) IMU: -0.284870 0.874921 0.254018
+[0m
+[0;32mI (51781) IMU: roll:-0.277982 pitch:0.874872 yaw:0.239974[0m
+[0;32mI (51781) IMU: -0.277982 0.874872 0.239974
+[0m
+[0;32mI (51891) IMU: roll:-0.320084 pitch:0.860931 yaw:0.226264[0m
+[0;32mI (51891) IMU: -0.320084 0.860931 0.226264
+[0m
+[0;32mI (52001) IMU: roll:-0.320008 pitch:0.846981 yaw:0.240215[0m
+[0;32mI (52001) IMU: -0.320008 0.846981 0.240215
+[0m
+[0;32mI (52111) IMU: roll:-0.340821 pitch:0.854080 yaw:0.261376[0m
+[0;32mI (52111) IMU: -0.340821 0.854080 0.261376
+[0m
+[0;32mI (52221) IMU: roll:-0.298511 pitch:0.826156 yaw:0.316952[0m
+[0;32mI (52221) IMU: -0.298511 0.826156 0.316952
+[0m
+[0;32mI (52331) IMU: roll:-0.333821 pitch:0.735287 yaw:0.302946[0m
+[0;32mI (52331) IMU: -0.333821 0.735287 0.302946
+[0m
+[0;32mI (52441) IMU: roll:-0.355280 pitch:0.483678 yaw:0.344266[0m
+[0;32mI (52441) IMU: -0.355280 0.483678 0.344266
+[0m
+[0;32mI (52551) IMU: roll:-0.790462 pitch:-0.025082 yaw:0.419483[0m
+[0;32mI (52551) IMU: -0.790462 -0.025082 0.419483
+[0m
+[0;32mI (52661) IMU: roll:-0.693319 pitch:-0.199829 yaw:0.495399[0m
+[0;32mI (52661) IMU: -0.693319 -0.199829 0.495399
+[0m
+[0;32mI (52771) IMU: roll:-0.566525 pitch:0.008793 yaw:0.363772[0m
+[0;32mI (52771) IMU: -0.566525 0.008793 0.363772
+[0m
+[0;32mI (52881) IMU: roll:-0.524477 pitch:0.029898 yaw:0.419827[0m
+[0;32mI (52881) IMU: -0.524477 0.029898 0.419827
+[0m
+[0;32mI (52991) IMU: roll:-0.475535 pitch:0.022870 yaw:0.454763[0m
+[0;32mI (52991) IMU: -0.475535 0.022870 0.454763
+[0m
+[0;32mI (53091) IMU: roll:-1.197705 pitch:-0.301384 yaw:0.605343[0m
+[0;32mI (53101) IMU: -1.197705 -0.301384 0.605343
+[0m
+[0;32mI (53211) IMU: roll:-1.328961 pitch:0.005597 yaw:0.482629[0m
+[0;32mI (53211) IMU: -1.328961 0.005597 0.482629
+[0m
+[0;32mI (53311) IMU: roll:-1.705983 pitch:0.290686 yaw:0.270025[0m
+[0;32mI (53321) IMU: -1.705983 0.290686 0.270025
+[0m
+[0;32mI (53421) IMU: roll:-1.369892 pitch:0.409244 yaw:0.305622[0m
+[0;32mI (53431) IMU: -1.369892 0.409244 0.305622
+[0m
+[0;32mI (53531) IMU: roll:-1.264563 pitch:0.535099 yaw:0.327639[0m
+[0;32mI (53541) IMU: -1.264563 0.535099 0.327639
+[0m
+[0;32mI (53641) IMU: roll:-1.151881 pitch:0.682302 yaw:0.391567[0m
+[0;32mI (53651) IMU: -1.151881 0.682302 0.391567
+[0m
+[0;32mI (53751) IMU: roll:-0.948548 pitch:0.675243 yaw:0.467196[0m
+[0;32mI (53761) IMU: -0.948548 0.675243 0.467196
+[0m
+[0;32mI (53861) IMU: roll:-0.598348 pitch:0.646432 yaw:0.569955[0m
+[0;32mI (53871) IMU: -0.598348 0.646432 0.569955
+[0m
+[0;32mI (53971) IMU: roll:-0.563232 pitch:0.702110 yaw:0.549056[0m
+[0;32mI (53981) IMU: -0.563232 0.702110 0.549056
+[0m
+[0;32mI (54081) IMU: roll:-0.541967 pitch:0.771918 yaw:0.542268[0m
+[0;32mI (54091) IMU: -0.541967 0.771918 0.542268
+[0m
+[0;32mI (54191) IMU: roll:-0.583673 pitch:0.758372 yaw:0.591435[0m
+[0;32mI (54201) IMU: -0.583673 0.758372 0.591435
+[0m
+[0;32mI (54301) IMU: roll:-0.493320 pitch:0.694787 yaw:0.548605[0m
+[0;32mI (54311) IMU: -0.493320 0.694787 0.548605
+[0m
+[0;32mI (54411) IMU: roll:-0.359633 pitch:0.729435 yaw:0.645845[0m
+[0;32mI (54421) IMU: -0.359633 0.729435 0.645845
+[0m
+[0;32mI (54521) IMU: roll:-0.289200 pitch:0.701330 yaw:0.750248[0m
+[0;32mI (54531) IMU: -0.289200 0.701330 0.750248
+[0m
+[0;32mI (54631) IMU: roll:-0.379438 pitch:0.778944 yaw:0.779030[0m
+[0;32mI (54641) IMU: -0.379438 0.778944 0.779030
+[0m
+[0;32mI (54741) IMU: roll:-0.365915 pitch:0.757714 yaw:0.729910[0m
+[0;32mI (54751) IMU: -0.365915 0.757714 0.729910
+[0m
+[0;32mI (54851) IMU: roll:-0.205625 pitch:0.519260 yaw:0.931247[0m
+[0;32mI (54861) IMU: -0.205625 0.519260 0.931247
+[0m
+[0;32mI (54961) IMU: roll:-0.282158 pitch:0.596714 yaw:0.889821[0m
+[0;32mI (54971) IMU: -0.282158 0.596714 0.889821
+[0m
+[0;32mI (55071) IMU: roll:-0.324196 pitch:0.596999 yaw:0.876047[0m
+[0;32mI (55081) IMU: -0.324196 0.596999 0.876047
+[0m
+[0;32mI (55181) IMU: roll:-0.268514 pitch:0.547665 yaw:0.896626[0m
+[0;32mI (55191) IMU: -0.268514 0.547665 0.896626
+[0m
+[0;32mI (55291) IMU: roll:-0.247419 pitch:0.575432 yaw:0.875608[0m
+[0;32mI (55301) IMU: -0.247419 0.575432 0.875608
+[0m
+[0;32mI (55401) IMU: roll:-0.184315 pitch:0.568025 yaw:0.917247[0m
+[0;32mI (55411) IMU: -0.184315 0.568025 0.917247
+[0m
+[0;32mI (55511) IMU: roll:-0.190781 pitch:0.686864 yaw:0.847548[0m
+[0;32mI (55521) IMU: -0.190781 0.686864 0.847548
+[0m
+[0;32mI (55621) IMU: roll:-0.162482 pitch:0.742590 yaw:0.833476[0m
+[0;32mI (55631) IMU: -0.162482 0.742590 0.833476
+[0m
+[0;32mI (55731) IMU: roll:-0.246319 pitch:0.750206 yaw:0.841024[0m
+[0;32mI (55741) IMU: -0.246319 0.750206 0.841024
+[0m
+[0;32mI (55841) IMU: roll:-0.344232 pitch:0.716075 yaw:0.883511[0m
+[0;32mI (55851) IMU: -0.344232 0.716075 0.883511
+[0m
+[0;32mI (55951) IMU: roll:-0.364738 pitch:0.737370 yaw:0.932662[0m
+[0;32mI (55961) IMU: -0.364738 0.737370 0.932662
+[0m
+[0;32mI (56061) IMU: roll:-0.422031 pitch:0.528289 yaw:1.009158[0m
+[0;32mI (56071) IMU: -0.422031 0.528289 1.009158
+[0m
+[0;32mI (56171) IMU: roll:-0.486617 pitch:0.353848 yaw:0.973725[0m
+[0;32mI (56181) IMU: -0.486617 0.353848 0.973725
+[0m
+[0;32mI (56281) IMU: roll:-0.529110 pitch:0.311951 yaw:0.910713[0m
+[0;32mI (56291) IMU: -0.529110 0.311951 0.910713
+[0m
+[0;32mI (56391) IMU: roll:-0.535244 pitch:0.430805 yaw:0.890310[0m
+[0;32mI (56401) IMU: -0.535244 0.430805 0.890310
+[0m
+[0;32mI (56501) IMU: roll:-0.502383 pitch:0.948666 yaw:1.004591[0m
+[0;32mI (56511) IMU: -0.502383 0.948666 1.004591
+[0m
+[0;32mI (56611) IMU: roll:-0.522282 pitch:0.907701 yaw:1.186405[0m
+[0;32mI (56621) IMU: -0.522282 0.907701 1.186405
+[0m
+[0;32mI (56721) IMU: roll:-0.409415 pitch:0.948735 yaw:1.248637[0m
+[0;32mI (56731) IMU: -0.409415 0.948735 1.248637
+[0m
+[0;32mI (56831) IMU: roll:-0.410964 pitch:0.843634 yaw:1.192306[0m
+[0;32mI (56841) IMU: -0.410964 0.843634 1.192306
+[0m
+[0;32mI (56941) IMU: roll:-0.405023 pitch:0.759540 yaw:1.163979[0m
+[0;32mI (56951) IMU: -0.405023 0.759540 1.163979
+[0m
+[0;32mI (57051) IMU: roll:-0.391427 pitch:0.738323 yaw:1.135841[0m
+[0;32mI (57061) IMU: -0.391427 0.738323 1.135841
+[0m
+[0;32mI (57161) IMU: roll:-0.391541 pitch:0.745223 yaw:1.107890[0m
+[0;32mI (57171) IMU: -0.391541 0.745223 1.107890
+[0m
+[0;32mI (57271) IMU: roll:-0.412951 pitch:0.696492 yaw:1.114838[0m
+[0;32mI (57281) IMU: -0.412951 0.696492 1.114838
+[0m
+[0;32mI (57381) IMU: roll:-0.412970 pitch:0.703436 yaw:1.100876[0m
+[0;32mI (57391) IMU: -0.412970 0.703436 1.100876
+[0m
+[0;32mI (57491) IMU: roll:-0.399056 pitch:0.682393 yaw:1.121700[0m
+[0;32mI (57501) IMU: -0.399056 0.682393 1.121700
+[0m
+[0;32mI (57601) IMU: roll:-0.336405 pitch:0.667712 yaw:1.093317[0m
+[0;32mI (57611) IMU: -0.336405 0.667712 1.093317
+[0m
+[0;32mI (57711) IMU: roll:-0.371604 pitch:0.640090 yaw:1.100418[0m
+[0;32mI (57721) IMU: -0.371604 0.640090 1.100418
+[0m
+[0;32mI (57821) IMU: roll:-0.385379 pitch:0.654258 yaw:1.114529[0m
+[0;32mI (57831) IMU: -0.385379 0.654258 1.114529
+[0m
+[0;32mI (57931) IMU: roll:-0.385379 pitch:0.654258 yaw:1.114529[0m
+[0;32mI (57941) IMU: -0.385379 0.654258 1.114529
+[0m
+[0;32mI (58041) IMU: roll:-0.379022 pitch:0.577324 yaw:1.135214[0m
+[0;32mI (58051) IMU: -0.379022 0.577324 1.135214
+[0m
+[0;32mI (58151) IMU: roll:-0.343910 pitch:0.584015 yaw:1.149052[0m
+[0;32mI (58161) IMU: -0.343910 0.584015 1.149052
+[0m
+[0;32mI (58261) IMU: roll:-0.315866 pitch:0.597686 yaw:1.134965[0m
+[0;32mI (58271) IMU: -0.315866 0.597686 1.134965
+[0m
+[0;32mI (58371) IMU: roll:-0.316002 pitch:0.576741 yaw:1.148894[0m
+[0;32mI (58381) IMU: -0.316002 0.576742 1.148894
+[0m
+[0;32mI (58481) IMU: roll:-0.365316 pitch:0.535310 yaw:1.162984[0m
+[0;32mI (58491) IMU: -0.365316 0.535310 1.162984
+[0m
+[0;32mI (58591) IMU: roll:-0.379407 pitch:0.528434 yaw:1.156030[0m
+[0;32mI (58601) IMU: -0.379407 0.528434 1.156030
+[0m
+[0;32mI (58701) IMU: roll:-0.421623 pitch:0.500905 yaw:1.163106[0m
+[0;32mI (58711) IMU: -0.421623 0.500905 1.163106
+[0m
+[0;32mI (58811) IMU: roll:-0.421765 pitch:0.486917 yaw:1.163054[0m
+[0;32mI (58821) IMU: -0.421765 0.486917 1.163054
+[0m
+[0;32mI (58921) IMU: roll:-0.443002 pitch:0.459180 yaw:1.170023[0m
+[0;32mI (58931) IMU: -0.443002 0.459180 1.170023
+[0m
+[0;32mI (59031) IMU: roll:-0.457033 pitch:0.452355 yaw:1.177042[0m
+[0;32mI (59041) IMU: -0.457033 0.452355 1.177042
+[0m
+[0;32mI (59141) IMU: roll:-0.413733 pitch:0.619533 yaw:1.107562[0m
+[0;32mI (59151) IMU: -0.413733 0.619533 1.107562
+[0m
+[0;32mI (59251) IMU: roll:-0.554664 pitch:0.509006 yaw:1.114738[0m
+[0;32mI (59261) IMU: -0.554664 0.509006 1.114738
+[0m
+[0;32mI (59361) IMU: roll:-0.661250 pitch:0.307796 yaw:1.218901[0m
+[0;32mI (59371) IMU: -0.661250 0.307796 1.218901
+[0m
+[0;32mI (59471) IMU: roll:-0.586651 pitch:0.083424 yaw:1.266520[0m
+[0;32mI (59481) IMU: -0.586651 0.083424 1.266520
+[0m
+[0;32mI (59581) IMU: roll:-0.525491 pitch:-0.078068 yaw:1.279741[0m
+[0;32mI (59591) IMU: -0.525491 -0.078068 1.279741
+[0m
+[0;32mI (59691) IMU: roll:-0.621128 pitch:-0.482465 yaw:1.319431[0m
+[0;32mI (59701) IMU: -0.621128 -0.482465 1.319431
+[0m
+[0;32mI (59801) IMU: roll:-0.693543 pitch:-0.691419 yaw:1.324852[0m
+[0;32mI (59811) IMU: -0.693543 -0.691419 1.324852
+[0m
+[0;32mI (59911) IMU: roll:-0.683409 pitch:-0.921574 yaw:1.463698[0m
+[0;32mI (59921) IMU: -0.683409 -0.921574 1.463698
+[0m
+[0;32mI (60021) IMU: roll:-0.630369 pitch:-0.600343 yaw:1.486564[0m
+[0;32mI (60031) IMU: -0.630369 -0.600343 1.486564
+[0m
+[0;32mI (60131) IMU: roll:-0.637246 pitch:-0.564891 yaw:1.556630[0m
+[0;32mI (60131) IMU: -0.637246 -0.564891 1.556630
+[0m
+[0;32mI (60241) IMU: roll:-0.610807 pitch:-0.663068 yaw:1.584518[0m
+[0;32mI (60241) IMU: -0.610807 -0.663068 1.584518
+[0m
+[0;32mI (60351) IMU: roll:-0.592564 pitch:-0.830910 yaw:1.639733[0m
+[0;32mI (60351) IMU: -0.592564 -0.830910 1.639733
+[0m
+[0;32mI (60461) IMU: roll:-0.557487 pitch:-0.810295 yaw:1.668066[0m
+[0;32mI (60461) IMU: -0.557487 -0.810295 1.668066
+[0m
+[0;32mI (60571) IMU: roll:-0.536331 pitch:-0.782462 yaw:1.703308[0m
+[0;32mI (60571) IMU: -0.536331 -0.782462 1.703308
+[0m
+[0;32mI (60681) IMU: roll:-0.576576 pitch:-0.997598 yaw:1.933041[0m
+[0;32mI (60681) IMU: -0.576576 -0.997598 1.933041
+[0m
+[0;32mI (60791) IMU: roll:-0.753181 pitch:-1.265034 yaw:2.300615[0m
+[0;32mI (60791) IMU: -0.753181 -1.265034 2.300615
+[0m
+[0;32mI (60901) IMU: roll:-0.744573 pitch:-1.759859 yaw:3.796640[0m
+[0;32mI (60901) IMU: -0.744573 -1.759859 3.796640
+[0m
+[0;32mI (61011) IMU: roll:-0.722669 pitch:-2.535762 yaw:5.406397[0m
+[0;32mI (61011) IMU: -0.722669 -2.535762 5.406397
+[0m
+[0;32mI (61121) IMU: roll:-0.836912 pitch:-3.487698 yaw:5.810503[0m
+[0;32mI (61131) IMU: -0.836912 -3.487698 5.810503
+[0m
+[0;32mI (61231) IMU: roll:-1.633856 pitch:-3.504754 yaw:4.549780[0m
+[0;32mI (61231) IMU: -1.633856 -3.504754 4.549780
+[0m
+[0;32mI (61341) IMU: roll:-2.340901 pitch:-2.967904 yaw:4.023202[0m
+[0;32mI (61351) IMU: -2.340901 -2.967904 4.023202
+[0m
+[0;32mI (61451) IMU: roll:-2.913499 pitch:-2.686727 yaw:3.501381[0m
+[0;32mI (61451) IMU: -2.913499 -2.686728 3.501381
+[0m
+[0;32mI (61561) IMU: roll:-2.668894 pitch:-2.955527 yaw:3.719573[0m
+[0;32mI (61561) IMU: -2.668894 -2.955527 3.719573
+[0m
+[0;32mI (61671) IMU: roll:-2.244941 pitch:-3.051495 yaw:3.477634[0m
+[0;32mI (61671) IMU: -2.244941 -3.051496 3.477634
+[0m
+[0;32mI (61781) IMU: roll:-2.099239 pitch:-3.048113 yaw:3.537960[0m
+[0;32mI (61781) IMU: -2.099239 -3.048113 3.537960
+[0m
+[0;32mI (61891) IMU: roll:-1.708274 pitch:-3.401223 yaw:3.208599[0m
+[0;32mI (61891) IMU: -1.708274 -3.401223 3.208599
+[0m
+[0;32mI (62001) IMU: roll:-1.578897 pitch:-3.573419 yaw:3.168693[0m
+[0;32mI (62001) IMU: -1.578897 -3.573419 3.168693
+[0m
+[0;32mI (62111) IMU: roll:-1.649524 pitch:-3.464986 yaw:3.287226[0m
+[0;32mI (62111) IMU: -1.649524 -3.464986 3.287226
+[0m
+[0;32mI (62221) IMU: roll:-1.673892 pitch:-3.498102 yaw:3.362959[0m
+[0;32mI (62221) IMU: -1.673892 -3.498102 3.362959
+[0m
+[0;32mI (62331) IMU: roll:-1.698999 pitch:-3.349636 yaw:3.420002[0m
+[0;32mI (62331) IMU: -1.698999 -3.349636 3.420002
+[0m
+[0;32mI (62441) IMU: roll:-1.705285 pitch:-3.382017 yaw:3.594846[0m
+[0;32mI (62441) IMU: -1.705285 -3.382017 3.594846
+[0m
+[0;32mI (62551) IMU: roll:-1.712355 pitch:-3.428240 yaw:3.776477[0m
+[0;32mI (62551) IMU: -1.712355 -3.428240 3.776477
+[0m
+[0;32mI (62661) IMU: roll:-1.713884 pitch:-3.491452 yaw:3.754644[0m
+[0;32mI (62661) IMU: -1.713884 -3.491452 3.754644
+[0m
+[0;32mI (62771) IMU: roll:-1.720167 pitch:-3.470255 yaw:3.754708[0m
+[0;32mI (62771) IMU: -1.720167 -3.470255 3.754708
+[0m
+[0;32mI (62881) IMU: roll:-1.736076 pitch:-3.525668 yaw:3.753463[0m
+[0;32mI (62881) IMU: -1.736076 -3.525668 3.753464
+[0m
+[0;32mI (62991) IMU: roll:-1.758189 pitch:-3.538582 yaw:3.773525[0m
+[0;32mI (62991) IMU: -1.758189 -3.538582 3.773525
+[0m
+[0;32mI (63101) IMU: roll:-1.759310 pitch:-3.552209 yaw:3.794281[0m
+[0;32mI (63101) IMU: -1.759310 -3.552209 3.794281
+[0m
+[0;32mI (63211) IMU: roll:-1.752160 pitch:-3.516951 yaw:3.829935[0m
+[0;32mI (63211) IMU: -1.752159 -3.516951 3.829935
+[0m
+[0;32mI (63321) IMU: roll:-1.745348 pitch:-3.488891 yaw:3.866188[0m
+[0;32mI (63321) IMU: -1.745348 -3.488891 3.866189
+[0m
+[0;32mI (63431) IMU: roll:-1.793810 pitch:-3.052555 yaw:3.903994[0m
+[0;32mI (63431) IMU: -1.793810 -3.052555 3.903994
+[0m
+[0;32mI (63541) IMU: roll:-1.779217 pitch:-1.994443 yaw:4.028578[0m
+[0;32mI (63541) IMU: -1.779217 -1.994443 4.028578
+[0m
+[0;32mI (63651) IMU: roll:-1.667012 pitch:-1.831550 yaw:3.955547[0m
+[0;32mI (63651) IMU: -1.667011 -1.831550 3.955547
+[0m
+[0;32mI (63761) IMU: roll:-1.769691 pitch:-1.380463 yaw:3.931441[0m
+[0;32mI (63761) IMU: -1.769691 -1.380463 3.931441
+[0m
+[0;32mI (63871) IMU: roll:-1.897565 pitch:-1.055529 yaw:3.850901[0m
+[0;32mI (63871) IMU: -1.897565 -1.055529 3.850901
+[0m
+[0;32mI (63981) IMU: roll:-2.022386 pitch:-0.594605 yaw:3.961750[0m
+[0;32mI (63981) IMU: -2.022386 -0.594605 3.961751
+[0m
+[0;32mI (64091) IMU: roll:-2.429106 pitch:-0.017703 yaw:3.781855[0m
+[0;32mI (64091) IMU: -2.429106 -0.017703 3.781855
+[0m
+[0;32mI (64201) IMU: roll:-2.463793 pitch:-0.008657 yaw:3.823718[0m
+[0;32mI (64201) IMU: -2.463793 -0.008657 3.823718
+[0m
+[0;32mI (64311) IMU: roll:-2.476879 pitch:0.018707 yaw:3.775456[0m
+[0;32mI (64311) IMU: -2.476879 0.018707 3.775456
+[0m
+[0;32mI (64421) IMU: roll:-2.488563 pitch:0.088904 yaw:3.769951[0m
+[0;32mI (64421) IMU: -2.488563 0.088904 3.769951
+[0m
+[0;32mI (64531) IMU: roll:-2.517549 pitch:0.277065 yaw:3.697287[0m
+[0;32mI (64531) IMU: -2.517549 0.277065 3.697287
+[0m
+[0;32mI (64641) IMU: roll:-2.570486 pitch:0.386442 yaw:3.510744[0m
+[0;32mI (64641) IMU: -2.570486 0.386442 3.510744
+[0m
+[0;32mI (64751) IMU: roll:-2.633264 pitch:0.656992 yaw:3.335632[0m
+[0;32mI (64751) IMU: -2.633264 0.656992 3.335632
+[0m
+[0;32mI (64861) IMU: roll:-2.770281 pitch:0.822548 yaw:3.081803[0m
+[0;32mI (64861) IMU: -2.770281 0.822548 3.081803
+[0m
+[0;32mI (64971) IMU: roll:-2.671824 pitch:2.046643 yaw:2.922739[0m
+[0;32mI (64971) IMU: -2.671824 2.046643 2.922739
+[0m
+[0;32mI (65081) IMU: roll:-2.397126 pitch:4.275213 yaw:3.119516[0m
+[0;32mI (65081) IMU: -2.397126 4.275213 3.119516
+[0m
+[0;32mI (65191) IMU: roll:-2.276833 pitch:4.933286 yaw:3.279248[0m
+[0;32mI (65191) IMU: -2.276833 4.933286 3.279248
+[0m
+[0;32mI (65301) IMU: roll:-2.338889 pitch:5.861961 yaw:3.426426[0m
+[0;32mI (65301) IMU: -2.338889 5.861961 3.426426
+[0m
+[0;32mI (65411) IMU: roll:-2.477007 pitch:6.619868 yaw:3.652722[0m
+[0;32mI (65411) IMU: -2.477007 6.619868 3.652722
+[0m
+[0;32mI (65521) IMU: roll:-2.365979 pitch:6.781097 yaw:3.792583[0m
+[0;32mI (65521) IMU: -2.365979 6.781097 3.792583
+[0m
+[0;32mI (65631) IMU: roll:-2.231331 pitch:6.761788 yaw:4.052539[0m
+[0;32mI (65631) IMU: -2.231331 6.761788 4.052539
+[0m
+[0;32mI (65741) IMU: roll:-2.176586 pitch:7.279620 yaw:4.120664[0m
+[0;32mI (65741) IMU: -2.176586 7.279620 4.120664
+[0m
+[0;32mI (65851) IMU: roll:-2.052748 pitch:7.283772 yaw:4.176751[0m
+[0;32mI (65851) IMU: -2.052748 7.283772 4.176751
+[0m
+[0;32mI (65961) IMU: roll:-2.126868 pitch:6.642984 yaw:4.578682[0m
+[0;32mI (65961) IMU: -2.126868 6.642984 4.578682
+[0m
+[0;32mI (66071) IMU: roll:-1.925720 pitch:5.051425 yaw:5.629079[0m
+[0;32mI (66071) IMU: -1.925720 5.051425 5.629079
+[0m
+[0;32mI (66181) IMU: roll:-1.537035 pitch:0.324514 yaw:6.434402[0m
+[0;32mI (66181) IMU: -1.537035 0.324514 6.434402
+[0m
+[0;32mI (66291) IMU: roll:-0.679174 pitch:-3.334717 yaw:9.300049[0m
+[0;32mI (66291) IMU: -0.679174 -3.334717 9.300049
+[0m
+[0;32mI (66401) IMU: roll:-1.002092 pitch:-5.084685 yaw:9.364911[0m
+[0;32mI (66401) IMU: -1.002092 -5.084685 9.364911
+[0m
+[0;32mI (66511) IMU: roll:-1.943666 pitch:-7.593780 yaw:6.437344[0m
+[0;32mI (66511) IMU: -1.943666 -7.593781 6.437344
+[0m
+[0;32mI (66621) IMU: roll:-2.886153 pitch:-9.506616 yaw:5.646860[0m
+[0;32mI (66621) IMU: -2.886153 -9.506616 5.646860
+[0m
+[0;32mI (66731) IMU: roll:-3.591417 pitch:-9.856761 yaw:5.554748[0m
+[0;32mI (66731) IMU: -3.591417 -9.856761 5.554748
+[0m
+[0;32mI (66841) IMU: roll:-4.474429 pitch:-10.813915 yaw:5.696668[0m
+[0;32mI (66841) IMU: -4.474429 -10.813915 5.696668
+[0m
+[0;32mI (66951) IMU: roll:-9.290601 pitch:-11.652564 yaw:-0.381300[0m
+[0;32mI (66951) IMU: -9.290601 -11.652564 -0.381300
+[0m
+[0;32mI (67061) IMU: roll:-8.037452 pitch:-11.234654 yaw:-0.749202[0m
+[0;32mI (67061) IMU: -8.037453 -11.234653 -0.749202
+[0m
+[0;32mI (67171) IMU: roll:-7.312735 pitch:-11.146467 yaw:-0.864089[0m
+[0;32mI (67171) IMU: -7.312735 -11.146466 -0.864089
+[0m
+[0;32mI (67281) IMU: roll:-6.755609 pitch:-10.714697 yaw:-1.039610[0m
+[0;32mI (67281) IMU: -6.755609 -10.714697 -1.039610
+[0m
+[0;32mI (67391) IMU: roll:-6.786991 pitch:-10.390436 yaw:-0.632040[0m
+[0;32mI (67391) IMU: -6.786991 -10.390436 -0.632040
+[0m
+[0;32mI (67501) IMU: roll:-5.605761 pitch:-10.308109 yaw:-0.000993[0m
+[0;32mI (67501) IMU: -5.605761 -10.308108 -0.000993
+[0m
+[0;32mI (67611) IMU: roll:-5.271064 pitch:-10.216510 yaw:0.111822[0m
+[0;32mI (67611) IMU: -5.271064 -10.216510 0.111822
+[0m
+[0;32mI (67721) IMU: roll:-4.818637 pitch:-10.035565 yaw:-0.117523[0m
+[0;32mI (67721) IMU: -4.818636 -10.035564 -0.117523
+[0m
+[0;32mI (67831) IMU: roll:-4.553814 pitch:-9.786800 yaw:-0.326134[0m
+[0;32mI (67831) IMU: -4.553814 -9.786799 -0.326134
+[0m
+[0;32mI (67941) IMU: roll:-4.322854 pitch:-9.447857 yaw:-0.392926[0m
+[0;32mI (67941) IMU: -4.322854 -9.447858 -0.392926
+[0m
+[0;32mI (68051) IMU: roll:-4.104966 pitch:-9.106870 yaw:-0.220693[0m
+[0;32mI (68051) IMU: -4.104966 -9.106870 -0.220693
+[0m
+[0;32mI (68161) IMU: roll:-4.115395 pitch:-9.062697 yaw:-0.170291[0m
+[0;32mI (68161) IMU: -4.115395 -9.062697 -0.170291
+[0m
+[0;32mI (68271) IMU: roll:-4.049480 pitch:-8.867174 yaw:-0.165294[0m
+[0;32mI (68271) IMU: -4.049480 -8.867173 -0.165294
+[0m
+[0;32mI (68381) IMU: roll:-3.881972 pitch:-8.092893 yaw:0.199039[0m
+[0;32mI (68381) IMU: -3.881972 -8.092893 0.199039
+[0m
+[0;32mI (68491) IMU: roll:-3.211819 pitch:-6.393930 yaw:0.574048[0m
+[0;32mI (68491) IMU: -3.211819 -6.393929 0.574048
+[0m
+[0;32mI (68601) IMU: roll:-3.116905 pitch:-6.160642 yaw:0.697989[0m
+[0;32mI (68601) IMU: -3.116904 -6.160642 0.697989
+[0m
+[0;32mI (68711) IMU: roll:-3.117811 pitch:-6.191753 yaw:0.837892[0m
+[0;32mI (68711) IMU: -3.117811 -6.191753 0.837892
+[0m
+[0;32mI (68821) IMU: roll:-3.175604 pitch:-6.395548 yaw:1.308629[0m
+[0;32mI (68821) IMU: -3.175604 -6.395548 1.308630
+[0m
+[0;32mI (68931) IMU: roll:-3.331345 pitch:-6.697890 yaw:2.173314[0m
+[0;32mI (68931) IMU: -3.331345 -6.697890 2.173314
+[0m
+[0;32mI (69041) IMU: roll:-3.340775 pitch:-6.650012 yaw:2.117257[0m
+[0;32mI (69041) IMU: -3.340775 -6.650012 2.117257
+[0m
+[0;32mI (69151) IMU: roll:-3.281841 pitch:-6.570987 yaw:1.988759[0m
+[0;32mI (69151) IMU: -3.281841 -6.570987 1.988759
+[0m
+[0;32mI (69261) IMU: roll:-3.200331 pitch:-6.404437 yaw:1.743781[0m
+[0;32mI (69261) IMU: -3.200331 -6.404437 1.743781
+[0m
+[0;32mI (69371) IMU: roll:-3.076995 pitch:-6.082567 yaw:1.553683[0m
+[0;32mI (69371) IMU: -3.076995 -6.082567 1.553683
+[0m
+[0;32mI (69481) IMU: roll:-2.855856 pitch:-5.705933 yaw:1.369630[0m
+[0;32mI (69481) IMU: -2.855856 -5.705933 1.369630
+[0m
+[0;32mI (69591) IMU: roll:-2.830806 pitch:-5.655538 yaw:1.449430[0m
+[0;32mI (69591) IMU: -2.830806 -5.655538 1.449430
+[0m
+[0;32mI (69701) IMU: roll:-2.808389 pitch:-5.614333 yaw:1.437471[0m
+[0;32mI (69701) IMU: -2.808389 -5.614333 1.437471
+[0m
+[0;32mI (69811) IMU: roll:-2.803646 pitch:-5.606230 yaw:1.487107[0m
+[0;32mI (69811) IMU: -2.803647 -5.606230 1.487107
+[0m
+[0;32mI (69921) IMU: roll:-2.788635 pitch:-5.578366 yaw:1.481198[0m
+[0;32mI (69921) IMU: -2.788635 -5.578366 1.481198
+[0m
+[0;32mI (70031) IMU: roll:-2.781043 pitch:-5.543566 yaw:1.482377[0m
+[0;32mI (70031) IMU: -2.781043 -5.543566 1.482377
+[0m
+[0;32mI (70141) IMU: roll:-2.742644 pitch:-5.475006 yaw:1.443410[0m
+[0;32mI (70141) IMU: -2.742644 -5.475006 1.443410
+[0m
+[0;32mI (70251) IMU: roll:-2.749105 pitch:-5.482223 yaw:1.428872[0m
+[0;32mI (70251) IMU: -2.749105 -5.482223 1.428872
+[0m
+[0;32mI (70361) IMU: roll:-2.763129 pitch:-5.439754 yaw:1.443193[0m
+[0;32mI (70361) IMU: -2.763129 -5.439754 1.443193
+[0m
+[0;32mI (70471) IMU: roll:-2.778254 pitch:-5.424867 yaw:1.470891[0m
+[0;32mI (70471) IMU: -2.778254 -5.424867 1.470891
+[0m
+[0;32mI (70581) IMU: roll:-2.793679 pitch:-5.388672 yaw:1.513116[0m
+[0;32mI (70581) IMU: -2.793679 -5.388672 1.513116
+[0m
+[0;32mI (70691) IMU: roll:-2.771403 pitch:-5.354449 yaw:1.500936[0m
+[0;32mI (70691) IMU: -2.771404 -5.354449 1.500936
+[0m
+[0;32mI (70801) IMU: roll:-2.778512 pitch:-5.340192 yaw:1.507941[0m
+[0;32mI (70801) IMU: -2.778512 -5.340191 1.507941
+[0m
+[0;32mI (70911) IMU: roll:-2.769857 pitch:-5.320051 yaw:1.480718[0m
+[0;32mI (70911) IMU: -2.769857 -5.320051 1.480718
+[0m
+[0;32mI (71021) IMU: roll:-2.783885 pitch:-5.319823 yaw:1.480044[0m
+[0;32mI (71021) IMU: -2.783885 -5.319823 1.480044
+[0m
+[0;32mI (71131) IMU: roll:-2.775389 pitch:-5.299186 yaw:1.459574[0m
+[0;32mI (71131) IMU: -2.775389 -5.299187 1.459574
+[0m
+[0;32mI (71241) IMU: roll:-2.760911 pitch:-5.271475 yaw:1.460901[0m
+[0;32mI (71241) IMU: -2.760911 -5.271475 1.460901
+[0m
+[0;32mI (71351) IMU: roll:-2.752922 pitch:-5.250980 yaw:1.447701[0m
+[0;32mI (71351) IMU: -2.752922 -5.250980 1.447701
+[0m
+[0;32mI (71461) IMU: roll:-2.716682 pitch:-5.188362 yaw:1.450558[0m
+[0;32mI (71461) IMU: -2.716682 -5.188362 1.450558
+[0m
+[0;32mI (71571) IMU: roll:-2.675590 pitch:-5.132143 yaw:1.495870[0m
+[0;32mI (71571) IMU: -2.675590 -5.132143 1.495870
+[0m
+[0;32mI (71681) IMU: roll:-2.676270 pitch:-5.174049 yaw:1.494916[0m
+[0;32mI (71681) IMU: -2.676270 -5.174049 1.494916
+[0m
+[0;32mI (71791) IMU: roll:-2.624498 pitch:-5.105816 yaw:1.463709[0m
+[0;32mI (71791) IMU: -2.624498 -5.105816 1.463709
+[0m
+[0;32mI (71901) IMU: roll:-2.615118 pitch:-5.064530 yaw:1.429648[0m
+[0;32mI (71901) IMU: -2.615118 -5.064530 1.429648
+[0m
+[0;32mI (72011) IMU: roll:-2.614792 pitch:-5.043576 yaw:1.430114[0m
+[0;32mI (72011) IMU: -2.614792 -5.043576 1.430114
+[0m
+[0;32mI (72121) IMU: roll:-2.571249 pitch:-4.988664 yaw:1.419228[0m
+[0;32mI (72121) IMU: -2.571249 -4.988664 1.419228
+[0m
+[0;32mI (72231) IMU: roll:-2.606077 pitch:-4.924473 yaw:1.439823[0m
+[0;32mI (72231) IMU: -2.606077 -4.924473 1.439823
+[0m
+[0;32mI (72341) IMU: roll:-2.635541 pitch:-4.965921 yaw:1.451916[0m
+[0;32mI (72341) IMU: -2.635541 -4.965921 1.451916
+[0m
+[0;32mI (72451) IMU: roll:-2.626427 pitch:-4.938613 yaw:1.417547[0m
+[0;32mI (72451) IMU: -2.626427 -4.938612 1.417547
+[0m
+[0;32mI (72561) IMU: roll:-2.604347 pitch:-4.890199 yaw:1.412559[0m
+[0;32mI (72561) IMU: -2.604347 -4.890200 1.412559
+[0m
+[0;32mI (72671) IMU: roll:-2.603350 pitch:-4.883704 yaw:1.391684[0m
+[0;32mI (72671) IMU: -2.603350 -4.883704 1.391684
+[0m
+[0;32mI (72781) IMU: roll:-2.601732 pitch:-4.835293 yaw:1.371739[0m
+[0;32mI (72781) IMU: -2.601732 -4.835293 1.371739
+[0m
+[0;32mI (72891) IMU: roll:-2.624657 pitch:-4.862104 yaw:1.405247[0m
+[0;32mI (72891) IMU: -2.624657 -4.862104 1.405247
+[0m
+[0;32mI (73001) IMU: roll:-2.616361 pitch:-4.855879 yaw:1.377670[0m
+[0;32mI (73001) IMU: -2.616360 -4.855879 1.377671
+[0m
+[0;32mI (73111) IMU: roll:-2.620120 pitch:-4.836457 yaw:1.307730[0m
+[0;32mI (73111) IMU: -2.620120 -4.836457 1.307730
+[0m
+[0;32mI (73221) IMU: roll:-2.627424 pitch:-4.836193 yaw:1.314435[0m
+[0;32mI (73221) IMU: -2.627424 -4.836193 1.314435
+[0m
+[0;32mI (73331) IMU: roll:-2.656664 pitch:-4.877373 yaw:1.326283[0m
+[0;32mI (73331) IMU: -2.656664 -4.877373 1.326283
+[0m
+[0;32mI (73441) IMU: roll:-2.634931 pitch:-4.849900 yaw:1.320825[0m
+[0;32mI (73441) IMU: -2.634931 -4.849900 1.320825
+[0m
+[0;32mI (73551) IMU: roll:-2.618971 pitch:-4.808550 yaw:1.294103[0m
+[0;32mI (73551) IMU: -2.618971 -4.808550 1.294103
+[0m
+[0;32mI (73661) IMU: roll:-2.590534 pitch:-4.781002 yaw:1.295936[0m
+[0;32mI (73661) IMU: -2.590534 -4.781002 1.295936
+[0m
+[0;32mI (73771) IMU: roll:-2.596091 pitch:-4.781714 yaw:1.260587[0m
+[0;32mI (73771) IMU: -2.596091 -4.781714 1.260587
+[0m
+[0;32mI (73881) IMU: roll:-2.601752 pitch:-4.747177 yaw:1.240034[0m
+[0;32mI (73881) IMU: -2.601752 -4.747177 1.240034
+[0m
+[0;32mI (73991) IMU: roll:-2.623070 pitch:-4.725605 yaw:1.253625[0m
+[0;32mI (73991) IMU: -2.623070 -4.725605 1.253625
+[0m
+[0;32mI (74101) IMU: roll:-2.636994 pitch:-4.739550 yaw:1.245704[0m
+[0;32mI (74101) IMU: -2.636994 -4.739550 1.245704
+[0m
+[0;32mI (74211) IMU: roll:-2.644292 pitch:-4.739289 yaw:1.252415[0m
+[0;32mI (74211) IMU: -2.644292 -4.739289 1.252415
+[0m
+[0;32mI (74321) IMU: roll:-2.644677 pitch:-4.746110 yaw:1.259266[0m
+[0;32mI (74321) IMU: -2.644677 -4.746110 1.259266
+[0m
+[0;32mI (74431) IMU: roll:-2.643620 pitch:-4.732633 yaw:1.238554[0m
+[0;32mI (74431) IMU: -2.643620 -4.732633 1.238554
+[0m
+[0;32mI (74531) IMU: roll:-2.643140 pitch:-4.739949 yaw:1.224377[0m
+[0;32mI (74531) IMU: -2.643140 -4.739949 1.224377
+[0m
+[0;32mI (74631) IMU: roll:-2.649479 pitch:-4.733199 yaw:1.210218[0m
+[0;32mI (74631) IMU: -2.649479 -4.733199 1.210217
+[0m
+[0;32mI (74741) IMU: roll:-2.628075 pitch:-4.705535 yaw:1.211742[0m
+[0;32mI (74741) IMU: -2.628075 -4.705535 1.211742
+[0m
+[0;32mI (74851) IMU: roll:-2.619105 pitch:-4.678216 yaw:1.177407[0m
+[0;32mI (74851) IMU: -2.619105 -4.678216 1.177407
+[0m
+[0;32mI (74961) IMU: roll:-2.611255 pitch:-4.657675 yaw:1.164153[0m
+[0;32mI (74961) IMU: -2.611255 -4.657675 1.164153
+[0m
+[0;32mI (75071) IMU: roll:-2.624707 pitch:-4.657821 yaw:1.149549[0m
+[0;32mI (75071) IMU: -2.624707 -4.657822 1.149549
+[0m
+[0;32mI (75181) IMU: roll:-2.608728 pitch:-4.638017 yaw:1.108552[0m
+[0;32mI (75181) IMU: -2.608728 -4.638017 1.108552
+[0m
+[0;32mI (75281) IMU: roll:-2.629537 pitch:-4.666028 yaw:1.093028[0m
+[0;32mI (75281) IMU: -2.629537 -4.666028 1.093028
+[0m
+[0;32mI (75381) IMU: roll:-2.635893 pitch:-4.659283 yaw:1.078875[0m
+[0;32mI (75381) IMU: -2.635893 -4.659283 1.078875
+[0m
+[0;32mI (75481) IMU: roll:-2.643159 pitch:-4.680156 yaw:1.078107[0m
+[0;32mI (75481) IMU: -2.643159 -4.680156 1.078107
+[0m
+[0;32mI (75581) IMU: roll:-2.643159 pitch:-4.680156 yaw:1.078107[0m
+[0;32mI (75581) IMU: -2.643159 -4.680156 1.078107
+[0m
+[0;32mI (75681) IMU: roll:-2.635496 pitch:-4.673583 yaw:1.064541[0m
+[0;32mI (75681) IMU: -2.635495 -4.673584 1.064541
+[0m
+[0;32mI (75791) IMU: roll:-2.642874 pitch:-4.680321 yaw:1.071098[0m
+[0;32mI (75791) IMU: -2.642874 -4.680321 1.071098
+[0m
+[0;32mI (75901) IMU: roll:-2.627467 pitch:-4.660186 yaw:1.044123[0m
+[0;32mI (75901) IMU: -2.627467 -4.660185 1.044123
+[0m
+[0;32mI (76001) IMU: roll:-2.634275 pitch:-4.667252 yaw:1.036663[0m
+[0;32mI (76001) IMU: -2.634275 -4.667252 1.036663
+[0m
+[0;32mI (76101) IMU: roll:-2.625968 pitch:-4.654016 yaw:1.009235[0m
+[0;32mI (76101) IMU: -2.625968 -4.654016 1.009235
+[0m
+[0;32mI (76201) IMU: roll:-2.647158 pitch:-4.667745 yaw:1.008041[0m
+[0;32mI (76201) IMU: -2.647158 -4.667745 1.008041
+[0m
+[0;32mI (76301) IMU: roll:-2.645659 pitch:-4.661581 yaw:0.973153[0m
+[0;32mI (76301) IMU: -2.645659 -4.661581 0.973153
+[0m
+[0;32mI (76401) IMU: roll:-2.631200 pitch:-4.647929 yaw:0.967045[0m
+[0;32mI (76401) IMU: -2.631200 -4.647929 0.967045
+[0m
+[0;32mI (76501) IMU: roll:-2.616945 pitch:-4.627127 yaw:0.968099[0m
+[0;32mI (76501) IMU: -2.616945 -4.627127 0.968099
+[0m
+[0;32mI (76601) IMU: roll:-2.595526 pitch:-4.592428 yaw:0.969749[0m
+[0;32mI (76601) IMU: -2.595526 -4.592428 0.969749
+[0m
+[0;32mI (76701) IMU: roll:-2.609140 pitch:-4.606569 yaw:0.954841[0m
+[0;32mI (76701) IMU: -2.609140 -4.606569 0.954841
+[0m
+[0;32mI (76801) IMU: roll:-2.608503 pitch:-4.599907 yaw:0.940978[0m
+[0;32mI (76801) IMU: -2.608503 -4.599906 0.940978
+[0m
+[0;32mI (76901) IMU: roll:-2.607867 pitch:-4.593243 yaw:0.927116[0m
+[0;32mI (76901) IMU: -2.607867 -4.593243 0.927116
+[0m
+[0;32mI (77011) IMU: roll:-2.621196 pitch:-4.607554 yaw:0.905196[0m
+[0;32mI (77011) IMU: -2.621196 -4.607554 0.905196
+[0m
+[0;32mI (77111) IMU: roll:-2.627999 pitch:-4.614629 yaw:0.897740[0m
+[0;32mI (77111) IMU: -2.627999 -4.614629 0.897740
+[0m
+[0;32mI (77211) IMU: roll:-2.648038 pitch:-4.600927 yaw:0.876163[0m
+[0;32mI (77211) IMU: -2.648038 -4.600927 0.876163
+[0m
+[0;32mI (77311) IMU: roll:-2.662484 pitch:-4.614589 yaw:0.882276[0m
+[0;32mI (77311) IMU: -2.662484 -4.614589 0.882276
+[0m
+[0;32mI (77421) IMU: roll:-2.675795 pitch:-4.600801 yaw:0.868001[0m
+[0;32mI (77421) IMU: -2.675795 -4.600801 0.868001
+[0m
+[0;32mI (77521) IMU: roll:-2.703487 pitch:-4.621805 yaw:0.852342[0m
+[0;32mI (77521) IMU: -2.703487 -4.621806 0.852342
+[0m
+[0;32mI (77621) IMU: roll:-2.710850 pitch:-4.628552 yaw:0.858899[0m
+[0;32mI (77621) IMU: -2.710850 -4.628551 0.858899
+[0m
+[0;32mI (77721) IMU: roll:-2.724868 pitch:-4.628407 yaw:0.858320[0m
+[0;32mI (77721) IMU: -2.724868 -4.628407 0.858320
+[0m
+[0;32mI (77831) IMU: roll:-2.752203 pitch:-4.642601 yaw:0.835801[0m
+[0;32mI (77831) IMU: -2.752203 -4.642601 0.835801
+[0m
+[0;32mI (77931) IMU: roll:-2.772947 pitch:-4.642559 yaw:0.827921[0m
+[0;32mI (77931) IMU: -2.772947 -4.642559 0.827921
+[0m
+[0;32mI (78031) IMU: roll:-2.793833 pitch:-4.656491 yaw:0.819704[0m
+[0;32mI (78031) IMU: -2.793833 -4.656491 0.819704
+[0m
+[0;32mI (78131) IMU: roll:-2.794967 pitch:-4.655799 yaw:0.847739[0m
+[0;32mI (78131) IMU: -2.794967 -4.655799 0.847740
+[0m
+[0;32mI (78231) IMU: roll:-2.787885 pitch:-4.648885 yaw:0.848199[0m
+[0;32mI (78231) IMU: -2.787885 -4.648885 0.848199
+[0m
+[0;32mI (78341) IMU: roll:-2.786965 pitch:-4.642418 yaw:0.827340[0m
+[0;32mI (78341) IMU: -2.786965 -4.642418 0.827340
+[0m
+[0;32mI (78441) IMU: roll:-2.793833 pitch:-4.656491 yaw:0.819704[0m
+[0;32mI (78441) IMU: -2.793833 -4.656491 0.819704
+[0m
+[0;32mI (78541) IMU: roll:-2.786047 pitch:-4.635948 yaw:0.806481[0m
+[0;32mI (78541) IMU: -2.786047 -4.635948 0.806481
+[0m
+[0;32mI (78641) IMU: roll:-2.771959 pitch:-4.629101 yaw:0.807228[0m
+[0;32mI (78641) IMU: -2.771960 -4.629101 0.807228
+[0m
+[0;32mI (78751) IMU: roll:-2.771539 pitch:-4.615301 yaw:0.800552[0m
+[0;32mI (78751) IMU: -2.771539 -4.615301 0.800552
+[0m
+[0;32mI (78851) IMU: roll:-2.764043 pitch:-4.594582 yaw:0.794332[0m
+[0;32mI (78851) IMU: -2.764043 -4.594582 0.794332
+[0m
+[0;32mI (78951) IMU: roll:-2.757244 pitch:-4.587494 yaw:0.801794[0m
+[0;32mI (78951) IMU: -2.757244 -4.587494 0.801794
+[0m
+[0;32mI (79051) IMU: roll:-2.735664 pitch:-4.559923 yaw:0.796305[0m
+[0;32mI (79051) IMU: -2.735664 -4.559923 0.796305
+[0m
+[0;32mI (79151) IMU: roll:-2.721023 pitch:-4.553410 yaw:0.783021[0m
+[0;32mI (79151) IMU: -2.721023 -4.553410 0.783021
+[0m
+[0;32mI (79251) IMU: roll:-2.727688 pitch:-4.546525 yaw:0.775891[0m
+[0;32mI (79251) IMU: -2.727688 -4.546525 0.775891
+[0m
+[0;32mI (79361) IMU: roll:-2.727242 pitch:-4.546418 yaw:0.768747[0m
+[0;32mI (79361) IMU: -2.727242 -4.546418 0.768747
+[0m
+[0;32mI (79461) IMU: roll:-2.727242 pitch:-4.546418 yaw:0.768747[0m
+[0;32mI (79461) IMU: -2.727242 -4.546418 0.768747
+[0m
+[0;32mI (79561) IMU: roll:-2.734116 pitch:-4.532378 yaw:0.768793[0m
+[0;32mI (79561) IMU: -2.734116 -4.532378 0.768793
+[0m
+[0;32mI (79661) IMU: roll:-2.748409 pitch:-4.532076 yaw:0.775234[0m
+[0;32mI (79661) IMU: -2.748409 -4.532076 0.775234
+[0m
+[0;32mI (79771) IMU: roll:-2.734601 pitch:-4.525054 yaw:0.782974[0m
+[0;32mI (79771) IMU: -2.734601 -4.525054 0.782974
+[0m
+[0;32mI (79871) IMU: roll:-2.726369 pitch:-4.483708 yaw:0.763219[0m
+[0;32mI (79871) IMU: -2.726369 -4.483708 0.763219
+[0m
+[0;32mI (79971) IMU: roll:-2.740650 pitch:-4.511522 yaw:0.761997[0m
+[0;32mI (79971) IMU: -2.740650 -4.511522 0.761997
+[0m
+[0;32mI (80081) IMU: roll:-2.733916 pitch:-4.511419 yaw:0.769287[0m
+[0;32mI (80081) IMU: -2.733916 -4.511419 0.769287
+[0m
+[0;32mI (80291) IMU: roll:-2.755350 pitch:-4.525022 yaw:0.775117[0m
+[0;32mI (80291) IMU: -2.755350 -4.525022 0.775117
+[0m
+[0;32mI (80391) IMU: roll:-2.755900 pitch:-4.524681 yaw:0.789133[0m
+[0;32mI (80391) IMU: -2.755900 -4.524681 0.789133
+[0m
+[0;32mI (80491) IMU: roll:-2.763631 pitch:-4.524546 yaw:0.803007[0m
+[0;32mI (80491) IMU: -2.763631 -4.524546 0.803007
+[0m
+[0;32mI (80601) IMU: roll:-2.757173 pitch:-4.524273 yaw:0.817309[0m
+[0;32mI (80601) IMU: -2.757173 -4.524273 0.817309
+[0m
+[0;32mI (80701) IMU: roll:-2.777166 pitch:-4.531738 yaw:0.788255[0m
+[0;32mI (80701) IMU: -2.777166 -4.531738 0.788255
+[0m
+[0;32mI (80801) IMU: roll:-2.784379 pitch:-4.552630 yaw:0.787468[0m
+[0;32mI (80801) IMU: -2.784379 -4.552630 0.787468
+[0m
+[0;32mI (80901) IMU: roll:-2.791043 pitch:-4.545748 yaw:0.780342[0m
+[0;32mI (80901) IMU: -2.791043 -4.545748 0.780342
+[0m
+[0;32mI (81001) IMU: roll:-2.804783 pitch:-4.545786 yaw:0.772765[0m
+[0;32mI (81001) IMU: -2.804783 -4.545786 0.772765
+[0m
+[0;32mI (81101) IMU: roll:-2.840585 pitch:-4.566056 yaw:0.784847[0m
+[0;32mI (81101) IMU: -2.840585 -4.566056 0.784847
+[0m
+[0;32mI (81201) IMU: roll:-2.841348 pitch:-4.558543 yaw:0.806045[0m
+[0;32mI (81201) IMU: -2.841348 -4.558543 0.806045
+[0m
+[0;32mI (81301) IMU: roll:-2.834060 pitch:-4.530667 yaw:0.807014[0m
+[0;32mI (81301) IMU: -2.834060 -4.530667 0.807014
+[0m
+[0;32mI (81411) IMU: roll:-2.804275 pitch:-4.482461 yaw:0.781160[0m
+[0;32mI (81411) IMU: -2.804275 -4.482460 0.781160
+[0m
+[0;32mI (81511) IMU: roll:-2.811728 pitch:-4.510612 yaw:0.780338[0m
+[0;32mI (81511) IMU: -2.811728 -4.510612 0.780338
+[0m
+[0;32mI (81611) IMU: roll:-2.804584 pitch:-4.496706 yaw:0.780958[0m
+[0;32mI (81611) IMU: -2.804584 -4.496706 0.780958
+[0m
+[0;32mI (81711) IMU: roll:-2.818943 pitch:-4.503383 yaw:0.787234[0m
+[0;32mI (81711) IMU: -2.818943 -4.503383 0.787234
+[0m
+[0;32mI (81811) IMU: roll:-2.811593 pitch:-4.496638 yaw:0.780677[0m
+[0;32mI (81811) IMU: -2.811593 -4.496638 0.780677
+[0m
+[0;32mI (81911) IMU: roll:-2.797540 pitch:-4.482355 yaw:0.788448[0m
+[0;32mI (81911) IMU: -2.797540 -4.482355 0.788448
+[0m
+[0;32mI (82011) IMU: roll:-2.783116 pitch:-4.468691 yaw:0.782337[0m
+[0;32mI (82011) IMU: -2.783116 -4.468690 0.782337
+[0m
+[0;32mI (82111) IMU: roll:-2.760879 pitch:-4.427485 yaw:0.763150[0m
+[0;32mI (82111) IMU: -2.760879 -4.427485 0.763150
+[0m
+[0;32mI (82211) IMU: roll:-2.768151 pitch:-4.455366 yaw:0.762205[0m
+[0;32mI (82211) IMU: -2.768152 -4.455366 0.762205
+[0m
+[0;32mI (82311) IMU: roll:-2.774954 pitch:-4.462458 yaw:0.754752[0m
+[0;32mI (82311) IMU: -2.774954 -4.462458 0.754752
+[0m
+[0;32mI (82411) IMU: roll:-2.774888 pitch:-4.455471 yaw:0.754919[0m
+[0;32mI (82411) IMU: -2.774888 -4.455471 0.754919
+[0m
+[0;32mI (82511) IMU: roll:-2.768019 pitch:-4.441392 yaw:0.762540[0m
+[0;32mI (82511) IMU: -2.768019 -4.441392 0.762540
+[0m
+[0;32mI (82611) IMU: roll:-2.767683 pitch:-4.434577 yaw:0.755698[0m
+[0;32mI (82611) IMU: -2.767683 -4.434577 0.755699
+[0m
+[0;32mI (82711) IMU: roll:-2.767617 pitch:-4.427590 yaw:0.755865[0m
+[0;32mI (82711) IMU: -2.767617 -4.427590 0.755865
+[0m
+[0;32mI (82811) IMU: roll:-2.746194 pitch:-4.413983 yaw:0.750019[0m
+[0;32mI (82811) IMU: -2.746194 -4.413983 0.750019
+[0m
+[0;32mI (82911) IMU: roll:-2.760741 pitch:-4.441629 yaw:0.755809[0m
+[0;32mI (82911) IMU: -2.760741 -4.441629 0.755809
+[0m
+[0;32mI (83011) IMU: roll:-2.768019 pitch:-4.441392 yaw:0.762540[0m
+[0;32mI (83011) IMU: -2.768019 -4.441392 0.762540
+[0m
+[0;32mI (83111) IMU: roll:-2.761011 pitch:-4.441459 yaw:0.762817[0m
+[0;32mI (83111) IMU: -2.761011 -4.441459 0.762817
+[0m
+[0;32mI (83211) IMU: roll:-2.760945 pitch:-4.434471 yaw:0.762984[0m
+[0;32mI (83211) IMU: -2.760945 -4.434471 0.762984
+[0m
+[0;32mI (83311) IMU: roll:-2.775635 pitch:-4.447970 yaw:0.776110[0m
+[0;32mI (83311) IMU: -2.775635 -4.447970 0.776110
+[0m
+[0;32mI (83411) IMU: roll:-2.768695 pitch:-4.426905 yaw:0.783897[0m
+[0;32mI (83411) IMU: -2.768695 -4.426905 0.783897
+[0m
+[0;32mI (83511) IMU: roll:-2.761015 pitch:-4.413340 yaw:0.770491[0m
+[0;32mI (83511) IMU: -2.761015 -4.413341 0.770491
+[0m
+[0;32mI (83611) IMU: roll:-2.768830 pitch:-4.440878 yaw:0.783563[0m
+[0;32mI (83611) IMU: -2.768830 -4.440878 0.783563
+[0m
+[0;32mI (83711) IMU: roll:-2.790599 pitch:-4.461291 yaw:0.796241[0m
+[0;32mI (83711) IMU: -2.790599 -4.461291 0.796241
+[0m
+[0;32mI (83811) IMU: roll:-2.790599 pitch:-4.461291 yaw:0.796241[0m
+[0;32mI (83811) IMU: -2.790599 -4.461291 0.796241
+[0m
+[0;32mI (83911) IMU: roll:-2.805024 pitch:-4.474954 yaw:0.802352[0m
+[0;32mI (83911) IMU: -2.805024 -4.474954 0.802352
+[0m
+[0;32mI (84121) IMU: roll:-2.805911 pitch:-4.481420 yaw:0.823206[0m
+[0;32mI (84121) IMU: -2.805911 -4.481420 0.823206
+[0m
+[0;32mI (84331) IMU: roll:-2.798770 pitch:-4.495636 yaw:0.816141[0m
+[0;32mI (84331) IMU: -2.798770 -4.495636 0.816141
+[0m
+[0;32mI (84441) IMU: roll:-2.776993 pitch:-4.475230 yaw:0.803472[0m
+[0;32mI (84441) IMU: -2.776993 -4.475230 0.803472
+[0m
+[0;32mI (84551) IMU: roll:-2.791350 pitch:-4.481905 yaw:0.809752[0m
+[0;32mI (84551) IMU: -2.791350 -4.481905 0.809752
+[0m
+[0;32mI (84661) IMU: roll:-2.791077 pitch:-4.482078 yaw:0.802744[0m
+[0;32mI (84661) IMU: -2.791077 -4.482078 0.802744
+[0m
+[0;32mI (84771) IMU: roll:-2.776855 pitch:-4.461256 yaw:0.803807[0m
+[0;32mI (84771) IMU: -2.776855 -4.461257 0.803807
+[0m
+[0;32mI (84881) IMU: roll:-2.770390 pitch:-4.460982 yaw:0.818102[0m
+[0;32mI (84881) IMU: -2.770390 -4.460982 0.818102
+[0m
+[0;32mI (84991) IMU: roll:-2.769575 pitch:-4.461496 yaw:0.797078[0m
+[0;32mI (84991) IMU: -2.769575 -4.461496 0.797078
+[0m
+[0;32mI (85101) IMU: roll:-2.762228 pitch:-4.454748 yaw:0.790516[0m
+[0;32mI (85101) IMU: -2.762228 -4.454749 0.790516
+[0m
+[0;32mI (85211) IMU: roll:-2.762160 pitch:-4.447762 yaw:0.790683[0m
+[0;32mI (85211) IMU: -2.762160 -4.447762 0.790683
+[0m
+[0;32mI (85321) IMU: roll:-2.768897 pitch:-4.447865 yaw:0.783396[0m
+[0;32mI (85321) IMU: -2.768898 -4.447865 0.783396
+[0m
+[0;32mI (85431) IMU: roll:-2.769370 pitch:-4.440536 yaw:0.797579[0m
+[0;32mI (85431) IMU: -2.769370 -4.440536 0.797579
+[0m
+[0;32mI (85541) IMU: roll:-2.761687 pitch:-4.426973 yaw:0.784174[0m
+[0;32mI (85541) IMU: -2.761687 -4.426972 0.784174
+[0m
+[0;32mI (85651) IMU: roll:-2.761351 pitch:-4.420157 yaw:0.777333[0m
+[0;32mI (85651) IMU: -2.761351 -4.420157 0.777333
+[0m
+[0;32mI (85761) IMU: roll:-2.753739 pitch:-4.413576 yaw:0.763759[0m
+[0;32mI (85761) IMU: -2.753739 -4.413577 0.763759
+[0m
+[0;32mI (85871) IMU: roll:-2.746266 pitch:-4.392852 yaw:0.757524[0m
+[0;32mI (85871) IMU: -2.746266 -4.392851 0.757524
+[0m
+[0;32mI (85981) IMU: roll:-2.753874 pitch:-4.399432 yaw:0.771100[0m
+[0;32mI (85981) IMU: -2.753875 -4.399432 0.771100
+[0m
+[0;32mI (86091) IMU: roll:-2.739394 pitch:-4.378774 yaw:0.765138[0m
+[0;32mI (86091) IMU: -2.739394 -4.378774 0.765138
+[0m
+[0;32mI (86201) IMU: roll:-2.724747 pitch:-4.357847 yaw:0.759037[0m
+[0;32mI (86201) IMU: -2.724747 -4.357847 0.759037
+[0m
+[0;32mI (86311) IMU: roll:-2.745173 pitch:-4.351004 yaw:0.744372[0m
+[0;32mI (86311) IMU: -2.745173 -4.351004 0.744372
+[0m
+[0;32mI (86421) IMU: roll:-2.753808 pitch:-4.364328 yaw:0.778939[0m
+[0;32mI (86421) IMU: -2.753808 -4.364328 0.778939
+[0m
+[0;32mI (86531) IMU: roll:-2.745968 pitch:-4.350495 yaw:0.765392[0m
+[0;32mI (86531) IMU: -2.745968 -4.350495 0.765392
+[0m
+[0;32mI (86641) IMU: roll:-2.760351 pitch:-4.371590 yaw:0.764483[0m
+[0;32mI (86641) IMU: -2.760350 -4.371590 0.764483
+[0m
+[0;32mI (86751) IMU: roll:-2.780380 pitch:-4.350946 yaw:0.743142[0m
+[0;32mI (86751) IMU: -2.780380 -4.350946 0.743142
+[0m
+[0;32mI (86861) IMU: roll:-2.864666 pitch:-4.314881 yaw:0.754758[0m
+[0;32mI (86861) IMU: -2.864666 -4.314881 0.754758
+[0m
+[0;32mI (86971) IMU: roll:-3.349487 pitch:-2.758738 yaw:1.472650[0m
+[0;32mI (86971) IMU: -3.349487 -2.758738 1.472650
+[0m
+[0;32mI (87081) IMU: roll:-2.644766 pitch:-0.323482 yaw:0.216192[0m
+[0;32mI (87081) IMU: -2.644766 -0.323482 0.216192
+[0m
+[0;32mI (87191) IMU: roll:-3.706450 pitch:6.399415 yaw:4.224603[0m
+[0;32mI (87191) IMU: -3.706450 6.399415 4.224603
+[0m
+[0;32mI (87301) IMU: roll:-6.135915 pitch:18.765188 yaw:6.913994[0m
+[0;32mI (87301) IMU: -6.135914 18.765188 6.913994
+[0m
+[0;32mI (87411) IMU: roll:-7.479842 pitch:27.324752 yaw:13.180458[0m
+[0;32mI (87411) IMU: -7.479842 27.324753 13.180458
+[0m
+[0;32mI (87521) IMU: roll:-10.304992 pitch:30.889875 yaw:18.102074[0m
+[0;32mI (87521) IMU: -10.304992 30.889875 18.102074
+[0m
+[0;32mI (87631) IMU: roll:-11.050637 pitch:27.049958 yaw:17.355179[0m
+[0;32mI (87631) IMU: -11.050637 27.049959 17.355179
+[0m
+[0;32mI (87741) IMU: roll:-7.078709 pitch:23.322743 yaw:13.736606[0m
+[0;32mI (87741) IMU: -7.078710 23.322742 13.736606
+[0m
+[0;32mI (87851) IMU: roll:-7.937012 pitch:20.109231 yaw:12.196279[0m
+[0;32mI (87851) IMU: -7.937012 20.109232 12.196279
+[0m
+[0;32mI (87961) IMU: roll:-8.109165 pitch:16.244587 yaw:12.847975[0m
+[0;32mI (87961) IMU: -8.109165 16.244587 12.847975
+[0m
+[0;32mI (88071) IMU: roll:1.362432 pitch:14.257799 yaw:15.084959[0m
+[0;32mI (88071) IMU: 1.362432 14.257799 15.084959
+[0m
+[0;32mI (88181) IMU: roll:5.655450 pitch:11.405746 yaw:12.175892[0m
+[0;32mI (88181) IMU: 5.655450 11.405746 12.175892
+[0m
+[0;32mI (88291) IMU: roll:9.812242 pitch:14.200733 yaw:11.449175[0m
+[0;32mI (88291) IMU: 9.812243 14.200732 11.449176
+[0m
+[0;32mI (88401) IMU: roll:9.347715 pitch:13.974141 yaw:11.148521[0m
+[0;32mI (88401) IMU: 9.347715 13.974141 11.148520
+[0m
+[0;32mI (88511) IMU: roll:9.369452 pitch:7.367512 yaw:14.925416[0m
+[0;32mI (88511) IMU: 9.369452 7.367512 14.925416
+[0m
+[0;32mI (88621) IMU: roll:9.880692 pitch:3.925626 yaw:20.110286[0m
+[0;32mI (88621) IMU: 9.880692 3.925627 20.110287
+[0m
+[0;32mI (88731) IMU: roll:14.506649 pitch:3.033232 yaw:22.195533[0m
+[0;32mI (88731) IMU: 14.506649 3.033232 22.195534
+[0m
+[0;32mI (88841) IMU: roll:18.550428 pitch:-0.111261 yaw:21.692959[0m
+[0;32mI (88841) IMU: 18.550428 -0.111261 21.692959
+[0m
+[0;32mI (88951) IMU: roll:25.361691 pitch:2.473963 yaw:20.951849[0m
+[0;32mI (88951) IMU: 25.361691 2.473963 20.951849
+[0m
+[0;32mI (89061) IMU: roll:27.797454 pitch:11.182242 yaw:13.989815[0m
+[0;32mI (89061) IMU: 27.797455 11.182242 13.989816
+[0m
+[0;32mI (89171) IMU: roll:21.163710 pitch:22.413839 yaw:10.537006[0m
+[0;32mI (89171) IMU: 21.163710 22.413839 10.537006
+[0m
+[0;32mI (89281) IMU: roll:6.629947 pitch:13.813912 yaw:11.782974[0m
+[0;32mI (89281) IMU: 6.629947 13.813912 11.782974
+[0m
+[0;32mI (89391) IMU: roll:0.675184 pitch:7.909669 yaw:8.825379[0m
+[0;32mI (89391) IMU: 0.675184 7.909669 8.825378
+[0m
+[0;32mI (89501) IMU: roll:0.838435 pitch:7.169300 yaw:4.130421[0m
+[0;32mI (89501) IMU: 0.838435 7.169301 4.130421
+[0m
+[0;32mI (89611) IMU: roll:-1.801485 pitch:4.664688 yaw:-2.314409[0m
+[0;32mI (89611) IMU: -1.801485 4.664688 -2.314409
+[0m
+[0;32mI (89721) IMU: roll:-4.112497 pitch:-1.750995 yaw:-8.780163[0m
+[0;32mI (89721) IMU: -4.112497 -1.750995 -8.780163
+[0m
+[0;32mI (89831) IMU: roll:-2.771339 pitch:-5.249165 yaw:-9.691880[0m
+[0;32mI (89831) IMU: -2.771339 -5.249165 -9.691879
+[0m
+[0;32mI (89941) IMU: roll:-6.146145 pitch:10.880120 yaw:-10.043857[0m
+[0;32mI (89941) IMU: -6.146145 10.880120 -10.043858
+[0m
+[0;32mI (90051) IMU: roll:-3.837735 pitch:9.605980 yaw:-9.906482[0m
+[0;32mI (90051) IMU: -3.837735 9.605980 -9.906482
+[0m
+[0;32mI (90161) IMU: roll:-4.262366 pitch:4.116777 yaw:-6.668395[0m
+[0;32mI (90161) IMU: -4.262366 4.116777 -6.668395
+[0m
+[0;32mI (90271) IMU: roll:-7.117153 pitch:-6.349577 yaw:-4.736849[0m
+[0;32mI (90271) IMU: -7.117153 -6.349577 -4.736849
+[0m
+[0;32mI (90381) IMU: roll:-10.270071 pitch:0.193841 yaw:-1.226451[0m
+[0;32mI (90381) IMU: -10.270071 0.193841 -1.226451
+[0m
+[0;32mI (90491) IMU: roll:-8.085183 pitch:-1.652019 yaw:2.864359[0m
+[0;32mI (90491) IMU: -8.085182 -1.652019 2.864359
+[0m
+[0;32mI (90601) IMU: roll:-5.652627 pitch:-5.485006 yaw:5.441873[0m
+[0;32mI (90601) IMU: -5.652627 -5.485005 5.441873
+[0m
+[0;32mI (90711) IMU: roll:-2.099206 pitch:-19.538665 yaw:4.091907[0m
+[0;32mI (90711) IMU: -2.099206 -19.538664 4.091907
+[0m
+[0;32mI (90821) IMU: roll:-3.836390 pitch:-32.845772 yaw:14.279252[0m
+[0;32mI (90821) IMU: -3.836390 -32.845772 14.279251
+[0m
+[0;32mI (90931) IMU: roll:-6.370233 pitch:-39.441559 yaw:11.378832[0m
+[0;32mI (90931) IMU: -6.370233 -39.441559 11.378832
+[0m
+[0;32mI (91041) IMU: roll:-5.844473 pitch:-42.258729 yaw:16.601582[0m
+[0;32mI (91041) IMU: -5.844473 -42.258728 16.601582
+[0m
+[0;32mI (91151) IMU: roll:-3.516091 pitch:-43.904941 yaw:14.675403[0m
+[0;32mI (91151) IMU: -3.516091 -43.904942 14.675403
+[0m
+[0;32mI (91261) IMU: roll:-5.384153 pitch:-41.893167 yaw:11.974581[0m
+[0;32mI (91261) IMU: -5.384153 -41.893166 11.974581
+[0m
+[0;32mI (91371) IMU: roll:-9.465953 pitch:-39.172767 yaw:12.851062[0m
+[0;32mI (91371) IMU: -9.465953 -39.172768 12.851062
+[0m
+[0;32mI (91481) IMU: roll:-9.554110 pitch:-40.186671 yaw:23.621031[0m
+[0;32mI (91481) IMU: -9.554111 -40.186672 23.621031
+[0m
+[0;32mI (91591) IMU: roll:2.893794 pitch:-37.424130 yaw:30.814392[0m
+[0;32mI (91591) IMU: 2.893794 -37.424129 30.814392
+[0m
+[0;32mI (91701) IMU: roll:-6.074730 pitch:-18.591932 yaw:22.486310[0m
+[0;32mI (91701) IMU: -6.074730 -18.591932 22.486309
+[0m
+[0;32mI (91811) IMU: roll:-6.101460 pitch:-13.079144 yaw:24.671792[0m
+[0;32mI (91811) IMU: -6.101460 -13.079144 24.671793
+[0m
+[0;32mI (91921) IMU: roll:-7.177224 pitch:-12.634483 yaw:20.116592[0m
+[0;32mI (91921) IMU: -7.177224 -12.634483 20.116592
+[0m
+[0;32mI (92031) IMU: roll:-5.233731 pitch:-9.214711 yaw:22.992944[0m
+[0;32mI (92031) IMU: -5.233731 -9.214710 22.992945
+[0m
+[0;32mI (92141) IMU: roll:-0.195985 pitch:-7.523283 yaw:23.061278[0m
+[0;32mI (92141) IMU: -0.195985 -7.523283 23.061277
+[0m
+[0;32mI (92251) IMU: roll:5.741381 pitch:-1.047872 yaw:21.218854[0m
+[0;32mI (92251) IMU: 5.741381 -1.047872 21.218853
+[0m
+[0;32mI (92361) IMU: roll:4.813906 pitch:3.539758 yaw:15.445976[0m
+[0;32mI (92361) IMU: 4.813906 3.539758 15.445976
+[0m
+[0;32mI (92471) IMU: roll:6.673358 pitch:9.564963 yaw:11.368389[0m
+[0;32mI (92471) IMU: 6.673358 9.564962 11.368389
+[0m
+[0;32mI (92581) IMU: roll:18.965960 pitch:4.626106 yaw:12.940394[0m
+[0;32mI (92581) IMU: 18.965960 4.626106 12.940393
+[0m
+[0;32mI (92691) IMU: roll:22.893809 pitch:1.588405 yaw:18.133087[0m
+[0;32mI (92691) IMU: 22.893808 1.588405 18.133087
+[0m
+[0;32mI (92801) IMU: roll:16.257589 pitch:5.564385 yaw:19.747972[0m
+[0;32mI (92801) IMU: 16.257589 5.564385 19.747972
+[0m
+[0;32mI (92911) IMU: roll:16.442098 pitch:4.584450 yaw:21.868352[0m
+[0;32mI (92911) IMU: 16.442097 4.584450 21.868351
+[0m
+[0;32mI (93021) IMU: roll:15.598694 pitch:3.614071 yaw:24.871244[0m
+[0;32mI (93021) IMU: 15.598694 3.614071 24.871244
+[0m
+[0;32mI (93131) IMU: roll:13.881304 pitch:4.991524 yaw:24.630123[0m
+[0;32mI (93131) IMU: 13.881304 4.991524 24.630123
+[0m
+[0;32mI (93241) IMU: roll:16.068155 pitch:4.962983 yaw:23.674677[0m
+[0;32mI (93241) IMU: 16.068155 4.962983 23.674677
+[0m
+[0;32mI (93351) IMU: roll:14.165288 pitch:5.168466 yaw:23.708550[0m
+[0;32mI (93351) IMU: 14.165288 5.168466 23.708549
+[0m
+[0;32mI (93461) IMU: roll:15.332936 pitch:4.926482 yaw:22.687805[0m
+[0;32mI (93461) IMU: 15.332936 4.926482 22.687805
+[0m
+[0;32mI (93571) IMU: roll:15.550100 pitch:4.405326 yaw:22.343511[0m
+[0;32mI (93571) IMU: 15.550100 4.405326 22.343512
+[0m
