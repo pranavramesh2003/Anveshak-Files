@@ -1,0 +1,5 @@
+[0/1] Re-running CMake...
+-- Configuring incomplete, errors occurred!
+See also "/home/pranav/esp-idf-mpu6050-dmp/MPU6050_DMP6/build/CMakeFiles/CMakeOutput.log".
+FAILED: build.ninja 
+/usr/bin/cmake -S/home/pranav/esp-idf-mpu6050-dmp/MPU6050_DMP6 -B/home/pranav/esp-idf-mpu6050-dmp/MPU6050_DMP6/build
