@@ -27,7 +27,6 @@
 */
 #include<ros.h>
 #include<navigation/gps_data.h>
-#include<std_msgs/Float32.h>
 #include<std_msgs/Int8.h>
 #include <Wire.h> //Needed for I2C to GNSS
 
@@ -36,19 +35,20 @@
 
 #include <SparkFun_u-blox_GNSS_v3.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
 
-volatile int GPS_Pub=0;
-
-void messageCb( const std_msgs::Int8& toggle_msg){
+//volatile bool GPS_Pub=false;
+/*
+void messageCb( const std_msgs::Bool& toggle_msg){
     GPS_Pub=toggle_msg.data;
 }
+*/
 
 SFE_UBLOX_GNSS myGNSS; // SFE_UBLOX_GNSS uses I2C. For Serial or SPI, see Example2 and Example3
 ros::NodeHandle nh;
-navigation::gps_data gps_pos;
-ros::Publisher gps("gps_coordinates",&gps_pos);
-std_msgs::Float32 enc_feed;
+//navigation::gps_data gps_pos;
+//ros::Publisher gps("gps_coordinates",&gps_pos);
+std_msgs::Int8 enc_feed;
 ros::Publisher enc_auto("enc_auto",&enc_feed);
-ros::Subscriber<std_msgs::Int8> sub("gps_bool", &messageCb );
+//ros::Subscriber<std_msgs::Bool> sub("gps_bool", &messageCb );
 
 
 
@@ -72,23 +72,24 @@ void setup()
 {
   nh.getHardware()->setBaud(115200);
   nh.initNode();
-  nh.advertise(gps);
-  nh.subscribe(sub);
+  //nh.advertise(gps);
+  //nh.subscribe(sub);
 
-  Wire.begin(); // Start I2C
+  //Wire.begin(); // Start I2C
   pinMode(encA,INPUT_PULLUP);
   pinMode(encB,INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(encA),callback,RISING);
   nh.advertise(enc_auto);
   //myGNSS.enableDebugging(); // Uncomment this line to enable helpful debug messages on Serial
-
+/*
   while (myGNSS.begin() == false) //Connect to the u-blox module using Wire port
   {
     delay (100);
   }
 
+
   myGNSS.setI2COutput(COM_TYPE_UBX); //Set the I2C port to output UBX only (turn off NMEA noise)
-  
+*/  
   //myGNSS.saveConfigSelective(VAL_CFG_SUBSEC_IOPORT); //Optional: save (only) the communications port settings to flash and BBR
 }
 
@@ -98,7 +99,7 @@ void loop()
   // Request (poll) the position, velocity and time (PVT) information.
   // The module only responds when a new position is available. Default is once per second.
   // getPVT() returns true when new data is received.
-  if (GPS_Pub == 1 && myGNSS.getPVT() == true)
+  /*if (GPS_Pub && myGNSS.getPVT() == true)
   {
     int32_t latitude = myGNSS.getLatitude();
     
@@ -110,10 +111,10 @@ void loop()
     timer = millis();
    
   }
-  gps.publish(&gps_pos);
-  enc_feed.data = ((enc_pos*360/4800));
+  */
+  //gps.publish(&gps_pos);
+  enc_feed.data = (enc_pos/100*180/25000);
   enc_auto.publish(&enc_feed);
-
   nh.spinOnce();
-  delay(50);
+  delay(100);
 }

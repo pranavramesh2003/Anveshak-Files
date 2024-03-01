@@ -1,11 +1,11 @@
 #include<ros.h>
-#include<std_msgs/Int8.h>
+#include<std_msgs/Float32.h>
 
-#define encA 21
-#define encB 22
+#define encA 18
+#define encB 19
 
 ros::NodeHandle nh;
-std_msgs::Int8 enc_feed;
+std_msgs::Float32 enc_feed;
 ros::Publisher enc_auto("enc_auto",&enc_feed);
 
 
@@ -42,7 +42,7 @@ void setup(){
 
 void loop(){
   nh.spinOnce();
-  enc_feed.data = (enc_pos/100*180/25000);
+  enc_feed.data = (enc_pos*360/4800);
   enc_auto.publish(&enc_feed);
   delay(100);
  
