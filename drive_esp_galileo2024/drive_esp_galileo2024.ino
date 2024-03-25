@@ -5,8 +5,8 @@
 #define encA 34
 #define encB 35
 
-int PWMpin[8] = {15, 2, 4, 18, 19, 21, 22, 23};
-int dirpin[8] = {13, 12, 14, 27, 26, 25, 33, 32};
+int PWMpin[8] = {9,35,18,37,13,20,11,47};
+int dirpin[8] = {10,8,48,36,14,19,12,21};
 
 ros::NodeHandle nh;
 std_msgs::Float32 enc_feed;
@@ -73,14 +73,14 @@ void loop(){
   {
     if(drive_buf[i]>=0)
       {
-        analogWrite(PWMpin[i],min(25,drive_buf[i]));
+        analogWrite(PWMpin[i],min(80,drive_buf[i]));
         digitalWrite(dirpin[i], HIGH);
       }
 
       
     else if(drive_buf[i]<0)
       {
-        analogWrite(PWMpin[i],min(25,-drive_buf[i]));
+        analogWrite(PWMpin[i],min(80,-drive_buf[i]));
         digitalWrite(dirpin[i], LOW);
       }
   }
