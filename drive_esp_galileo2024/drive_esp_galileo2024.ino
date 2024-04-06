@@ -1,18 +1,17 @@
 #include<ros.h>
-#include<std_msgs/Float32.h>
+#include<std_msgs/Float32MultiArray.h>
 #include<std_msgs/Int32MultiArray.h>
 
-#define encA 34
-#define encB 35
+#define NUM_ENC 7
 
 int PWMpin[8] = {9,35,18,37,13,20,11,47};
 int dirpin[8] = {10,8,48,36,14,19,12,21};
 
 ros::NodeHandle nh;
-std_msgs::Float32 enc_feed;
-ros::Publisher enc_auto("enc_auto",&enc_feed);
 
 int drive_buf[8] = {0};
+float enc_feed[NUM_ENC] = {0};
+
 void messageCb(const std_msgs::Int32MultiArray & drive_inp)
 {
   for(int i=0;i<8;i++)
@@ -21,29 +20,109 @@ void messageCb(const std_msgs::Int32MultiArray & drive_inp)
   }
 }
 
+std_msgs::Float32MultiArray enc_msg;
+std_msgs::MultiArrayDimension enc_dim;
+std_msgs::MultiArrayLayout enc_layout;
+ros::Publisher enc_pub("enc_auto", &enc_msg);
+
 ros::Subscriber<std_msgs::Int32MultiArray> sub("motor_pwm", messageCb);
 
 
 
 
-volatile long enc_pos=0;
-volatile bool A_set=false;
-volatile bool B_set=false;
+volatile long enc_pos[NUM_ENC]={0};
+volatile bool A_set[NUM_ENC]={false};
+volatile bool B_set[NUM_ENC]={false};
 
-
+int encA[NUM_ENC] = {5,7,16,42,40,38,4};
+int encB[NUM_ENC] = {6,15,17,2,41,39,1};
 
  
-void callback(){
-  A_set=digitalRead(encA);
-  B_set=digitalRead(encB);
-  if(A_set==B_set){
-    enc_pos++;
-  }
-  else{
-    enc_pos--;
-  }
+void callback_0(){
+    int i=0;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
 }
+void callback_1(){
+    int i=1;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
+ 
+void callback_2(){
+    int i=2;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
+ 
+void callback_3(){
+    int i=3;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
+ 
+void callback_4(){
+    int i=4;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
+ 
+void callback_5(){
+    int i=5;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
+ 
+void callback_6(){
+    int i=6;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
+ 
 
+ 
 
 
 int max(int a, int b)
@@ -52,19 +131,32 @@ int max(int a, int b)
   else return b;
 }
 void setup(){
-  pinMode(encA,INPUT_PULLUP);
-  pinMode(encB,INPUT_PULLUP);
+  //Serial.begin(115200);
+  for(int i=0;i<NUM_ENC;i++)
+  {
+    pinMode(encA[i],INPUT_PULLUP);
+    pinMode(encB[i],INPUT_PULLUP);
+  }
   for(int i=0;i<8;i++)
   {
     pinMode(PWMpin[i], OUTPUT);
     pinMode(dirpin[i], OUTPUT);
   }
-  
-  attachInterrupt(digitalPinToInterrupt(encA),callback,RISING);
+  attachInterrupt(digitalPinToInterrupt(encA[0]),callback_0,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[1]),callback_1,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[2]),callback_2,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[3]),callback_3,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[4]),callback_4,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[5]),callback_5,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[6]),callback_6,RISING);    
+
+
   nh.getHardware()->setBaud(115200);
   nh.initNode();
-  nh.advertise(enc_auto);
+  nh.advertise(enc_pub);
   nh.subscribe(sub);
+  enc_msg.data_length = NUM_ENC;
+  enc_msg.layout = enc_layout;
 }
 
 void loop(){
@@ -84,8 +176,13 @@ void loop(){
         digitalWrite(dirpin[i], LOW);
       }
   }
-  enc_feed.data = (enc_pos*360/4800);
-  //enc_auto.publish(&enc_feed);
+  for(int i=0;i<NUM_ENC;i++)
+  {
+    enc_feed[i] = (enc_pos[i]*360/4800);
+  }
+  enc_msg.data = enc_feed;
+  enc_pub.publish(&enc_msg);
+  //Serial.println(enc_pos[0]);
   delay(100);
  
 }

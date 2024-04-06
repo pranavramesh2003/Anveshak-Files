@@ -1,8 +1,8 @@
 #include<ros.h>
 #include<std_msgs/Float32.h>
 
-#define encA 18
-#define encB 19
+#define encA 5
+#define encB 6
 
 ros::NodeHandle nh;
 std_msgs::Float32 enc_feed;
@@ -32,6 +32,7 @@ void callback(){
 
 
 void setup(){
+  Serial.begin(115200);
   pinMode(encA,INPUT_PULLUP);
   pinMode(encB,INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(encA),callback,RISING);
@@ -44,6 +45,7 @@ void loop(){
   nh.spinOnce();
   enc_feed.data = (enc_pos*360/4800);
   enc_auto.publish(&enc_feed);
+  Serial.println(enc_pos);
   delay(100);
  
 }
