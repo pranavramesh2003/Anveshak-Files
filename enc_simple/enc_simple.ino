@@ -32,7 +32,6 @@ void callback(){
 
 
 void setup(){
-  Serial.begin(115200);
   pinMode(encA,INPUT_PULLUP);
   pinMode(encB,INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(encA),callback,RISING);
@@ -45,7 +44,6 @@ void loop(){
   nh.spinOnce();
   enc_feed.data = (enc_pos*360/4800);
   enc_auto.publish(&enc_feed);
-  Serial.println(enc_pos);
   delay(100);
  
 }

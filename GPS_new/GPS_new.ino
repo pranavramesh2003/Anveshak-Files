@@ -31,8 +31,8 @@
 #include<std_msgs/Int8.h>
 #include <Wire.h> //Needed for I2C to GNSS
 
-#define encA 18
-#define encB 19
+#define encA 5
+#define encB 6
 
 #include <SparkFun_u-blox_GNSS_v3.h> //http://librarymanager/All#SparkFun_u-blox_GNSS_v3
 
