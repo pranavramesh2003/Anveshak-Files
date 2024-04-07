@@ -4,9 +4,9 @@
 
 #define NUM_ENC 7
 
-int PWMpin[8] = {9,35,18,37,13,20,11,47};
-int dirpin[8] = {10,8,48,36,14,19,12,21};
-
+int PWMpin[8] = {9,35,18,37,13,20,11,47};   //front two, followed by back two, LRLR
+int dirpin[8] = {10,48,8,36,14,19,12,21};   //first four are drive. 
+int defaultdir[8] = {1,1,1,1,1,1,0,1};
 ros::NodeHandle nh;
 
 int drive_buf[8] = {0};
@@ -166,14 +166,14 @@ void loop(){
     if(drive_buf[i]>=0)
       {
         analogWrite(PWMpin[i],min(80,drive_buf[i]));
-        digitalWrite(dirpin[i], HIGH);
+        digitalWrite(dirpin[i], defaultdir[i]);
       }
 
       
     else if(drive_buf[i]<0)
       {
         analogWrite(PWMpin[i],min(80,-drive_buf[i]));
-        digitalWrite(dirpin[i], LOW);
+        digitalWrite(dirpin[i], 1-defaultdir[i]);
       }
   }
   for(int i=0;i<NUM_ENC;i++)
