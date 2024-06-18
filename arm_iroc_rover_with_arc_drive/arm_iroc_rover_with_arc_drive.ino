@@ -180,6 +180,8 @@ void loop(){
   enc_feed[5] = (enc_pos[5]*360/4800*90/2374); // Elbow
   enc_feed[3] = (enc_pos[3]*360/4800*90/2374*90/60*75/106); //Base
   enc_feed[0] = (enc_pos[0]*360/4800*90.0/187.0); //roll
+  enc_feed[1] = enc_pos[1];
+  enc_feed[4] = enc_pos[4];
   //for(int i=0;i<NUM_ENC;i++)
   //{
     //enc_feed[i] = (enc_pos[i]*360/4800*90/2374*90/60);

@@ -1,16 +1,9 @@
 
-int dirl[] = {16,2};
-int pwml[] = {4,15};
-
-int dirr[] = {13,14};
-int pwmr[] = {12,27};
-
-
 #include<ros.h>
 #include<std_msgs/Float32MultiArray.h>
 #include<std_msgs/Int32MultiArray.h>
 
-#define NUM_ENC 3
+#define NUM_ENC 4
 
 int dirpin[4] = {14,16,13,2};   //front two, followed by back two, LRLR
 int PWMpin[4] = {27,4,12,15};   //first four are drive. 
@@ -31,7 +24,7 @@ void messageCb(const std_msgs::Int32MultiArray & drive_inp)
 std_msgs::Float32MultiArray enc_msg;
 std_msgs::MultiArrayDimension enc_dim;
 std_msgs::MultiArrayLayout enc_layout;
-ros::Publisher enc_pub("enc_drive", &enc_msg);
+ros::Publisher enc_pub("enc_wheel_odom", &enc_msg);
 
 ros::Subscriber<std_msgs::Int32MultiArray> sub("motor_pwm", messageCb);
 
@@ -42,8 +35,8 @@ volatile long enc_pos[NUM_ENC]={0};
 volatile bool A_set[NUM_ENC]={false};
 volatile bool B_set[NUM_ENC]={false};
 
-int encA[NUM_ENC]  = {2,5,38};
-int encB[NUM_ENC]  = {42,6,39};
+int encA[NUM_ENC]  = {32,25,23,19};
+int encB[NUM_ENC]  = {33,26,22,18};
  
 void callback_0(){
     int i=0;
@@ -79,7 +72,18 @@ void callback_2(){
       enc_pos[i]--;
     }
 }
- 
+
+void callback_3(){
+    int i=2;
+    A_set[i]=digitalRead(encA[i]);
+    B_set[i]=digitalRead(encB[i]);
+    if(A_set[i]==B_set[i]){
+      enc_pos[i]++;
+    }
+    else{
+      enc_pos[i]--;
+    }
+}
 
 
 int max(int a, int b)
@@ -102,6 +106,8 @@ void setup(){
   attachInterrupt(digitalPinToInterrupt(encA[0]),callback_0,RISING);    
   attachInterrupt(digitalPinToInterrupt(encA[1]),callback_1,RISING);    
   attachInterrupt(digitalPinToInterrupt(encA[2]),callback_2,RISING);    
+  attachInterrupt(digitalPinToInterrupt(encA[3]),callback_2,RISING);    
+
  
   nh.getHardware()->setBaud(115200);
   nh.initNode();
