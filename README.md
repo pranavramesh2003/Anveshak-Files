@@ -1,3 +1,5 @@
+Science
+*************
 Never connect any sensor to input only pins, because they most likely will need the ESP to send Acknowledge messages.
 We had to play with traces and jumpers on the PCB, because this happened with the DHT and the DS18B20. The DHT would throw an error message on the serial monitor that said GPIO error or something, but the DS18B20 would just give its wrong default value of -127.
 
