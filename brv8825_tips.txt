@@ -1,0 +1,19 @@
+brv8825 - stepper motor driver
+
+Enable, M0, M1, M2 can be left unconnected.
+But, RST and SLEEP need to be given to logic high for motor to rotate.
+
+You can probe A1, B1, A2, B2 using an oscilloscope (even hand held) and see clear signals. Make sure you set the time axis properly (I almost missed the pulses because my time axis was too zoomed in).
+The 4 motor outputs appear on the oscilloscope even if RST and SLP are not connected to logic high, but the motor won't rotate).
+
+The motor driver can get unbelievably hot even with the heat sink (I read online that brv8825 can burn you at temperatures way lesser than those that could damage the motor driver).
+
+But, if the motor driver gets unbeleivably hot, it is probably a connection issue (happened when we connected A1, B2 to one coil and A2, B1 to another). However, the motor may get slightly warm during normal operation.
+
+The speed of the stepper can be controlled by using delay (when using custom code) or using API functions inbuilt in libraries. We also speculate that using the microstepping pins M0, M1, M2 can do the same, but we haven't tried this.
+
+Warnings - while testing without a breadboard/PCB, do not touch the brv8825 after the battery has been connected. Even a small force meant to hold the driver in place can cause two adjacent jumper wires (probably Vmot and GND) to short. This has caused smoke twice, but did not kill the motor driver both times surprisingly.
+
+The stepper motor needs to be held in place (as of 7.7.24) to work properly. If it is left of the table or held loosely, it can cause a loose connection in the wires, or cause the motor to change direction abruptly (making the motion of the motor seem like vibrations).
+
+Nvm, it is just a horrible motor driver, NEVER ever use it. When we checked the same motor with the driver we used for IRC24 (A4988), it worked instantly. Like, why doesn't it have an LED to indicate power?!!
